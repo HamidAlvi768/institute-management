@@ -7,7 +7,7 @@ import OverView from "./OverView";
 import RevenueByLocation from "./RevenueByLocation";
 import LatestTransation from "./LatestTransation";
 
-import { Row, Container } from "reactstrap";
+import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb";
@@ -30,12 +30,19 @@ const Dashboard = () => {
           </Row>
 
           <Row>
-            {/* Order Stats */}
-            <OrderStatus />
-            {/* Notifications */}
-            <Notifications />
-            {/* Revenue by Location Vector Map */}
-            <RevenueByLocation />
+            {/* Parent Card for Course Metrics Section */}
+            <Col xl={12}>
+              <Card>
+                <CardBody>
+                  <CardTitle tag="h4">Course & Training Metrics</CardTitle>
+                  <Row>
+                    <OrderStatus cardClassName="transparent-card" />
+                    <Notifications cardClassName="transparent-card" />
+                    <RevenueByLocation cardClassName="transparent-card" />
+                  </Row>
+                </CardBody>
+              </Card>
+            </Col>
           </Row>
 
           {/* Latest Transaction Table */}

@@ -6,46 +6,53 @@ const RadialChart = () => {
   const options = {
     chart: {
       height: 350,
-      type: "radialBar",
+      type: "bar",
+      toolbar: { show: false },
     },
     plotOptions: {
-      radialBar: {
-        hollow: {
-          margin: 10,
-          size: "45%",
-        },
-        track: {
-          show: true,
-          strokeWidth: "70%",
-          margin: 12,
-        },
-        dataLabels: {
-          name: {
-            fontSize: "27px",
-          },
-          value: {
-            fontSize: "20px",
-          },
-          total: {
-            show: true,
-            label: "Total Institutes",
-            formatter: function (w) {
-              return "1,234";
-            },
-          },
-        },
+      bar: {
+        horizontal: true,
+        columnWidth: "45%",
+        endingShape: "rounded",
       },
     },
-    labels: ["Government", "Accredited", "Certified Trainers"],
+    dataLabels: {
+      enabled: true,
+    },
     colors: ["#0ab39c", "#4aa3ff", "#5664d2"],
+    xaxis: {
+      categories: ["Government", "Accredited", "Certified Trainers"],
+      labels: {
+        style: { fontSize: '14px' }
+      },
+    },
+    yaxis: {
+      title: {
+        text: "Count",
+      },
+      min: 0,
+      forceNiceScale: true,
+      labels: {
+        stepSize: 10,
+        formatter: function(val) { return Math.round(val); }
+      }
+    },
+    grid: {
+      borderColor: "#f1f1f1",
+    },
+    tooltip: {
+      y: {
+        formatter: function(val) { return val + " institutes"; }
+      }
+    }
   };
   return (
     <React.Fragment>
       <ReactApexChart
         options={options}
-        series={series}
-        type="radialBar"
-        height="350"
+        series={[{ name: "Institutes", data: series }]}
+        type="bar"
+        height={350}
         className="apex-charts"
       />
     </React.Fragment>

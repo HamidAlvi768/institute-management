@@ -11,24 +11,16 @@ import ReactApexChart from "react-apexcharts";
 import { OrderStatusData } from '../../CommonData/Data/index';
 
 
-const OrderStatus = () => {
-    // Prepare data for the pie chart
-    const pieSeries = OrderStatusData.map(item => Number(item.width));
-    const pieLabels = OrderStatusData.map(item => item.title);
-    const pieColors = OrderStatusData.map(item => {
-        // Map color names to hex or rgb if needed, or use Bootstrap color classes
-        switch(item.color) {
-            case 'success': return 'rgb(17, 196, 110)';
-            case 'warning': return '#f1b44c';
-            case 'danger': return '#f46a6a';
-            default: return '#ccc';
-        }
-    });
+const OrderStatus = ({ cardClassName = "" }) => {
+    // Prepare data for the pie chart (Course Metrics)
+    const pieSeries = [120, 90, 15];
+    const pieLabels = ['Total Courses', 'Accredited', 'Expiring Soon'];
+    const pieColors = ['#3d8ef8', '#11c46e', '#f46a6a'];
     const pieOptions = {
         labels: pieLabels,
         colors: pieColors,
         legend: {
-            show: true,
+            show: false,
             position: "bottom",
             horizontalAlign: "center",
             verticalAlign: "middle",
@@ -54,9 +46,9 @@ const OrderStatus = () => {
     return (
         <React.Fragment>
             <Col xl={4}>
-                <Card>
+                <Card className={cardClassName} style={cardClassName === 'transparent-card' ? { background: 'transparent', boxShadow: 'none' } : {}}>
                     <CardBody>
-                        <CardTitle>Order Stats</CardTitle>
+                        <CardTitle>Course Type</CardTitle>
                         <div className="mb-4">
                             <ReactApexChart
                                 options={pieOptions}
@@ -65,17 +57,6 @@ const OrderStatus = () => {
                                 height="320"
                                 className="apex-charts"
                             />
-                        </div>
-                        <hr />
-                        <div className="text-center">
-                            <Row>
-                                {OrderStatusData.map((item, key) => (<div key={key} className="col-4">
-                                    <div className="mt-2">
-                                        <p className="text-muted mb-2"><i className={item.icon}></i> {item.title}</p>
-                                        <h5 className="font-size-16 mb-0">{item.width}</h5>
-                                    </div>
-                                </div>))}
-                            </Row>
                         </div>
                     </CardBody>
                 </Card>

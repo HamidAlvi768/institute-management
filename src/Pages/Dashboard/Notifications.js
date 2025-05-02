@@ -10,15 +10,15 @@ import { Card, CardBody, CardTitle, Col } from "reactstrap";
 
 import { NotificationsData } from "../../CommonData/Data/index";
 
-const Notifications = () => {
-  // Prepare data for the bar chart
-  const categories = NotificationsData.map(item => item.name);
-  // For demo, each notification is counted as 1 (since there are only 3)
-  const data = NotificationsData.map(() => 1);
+const Notifications = ({ cardClassName = "" }) => {
+  // Prepare data for the bar chart (CBT Levels)
+  const categories = ['Level 1', 'Level 2', 'Level 3', 'Level 4', 'Level 5'];
+  const data = [10, 25, 40, 20, 5];
   const barOptions = {
     chart: {
       toolbar: { show: false },
     },
+    legend: { show: false },
     plotOptions: {
       bar: {
         horizontal: false,
@@ -29,7 +29,7 @@ const Notifications = () => {
     dataLabels: {
       enabled: true,
     },
-    colors: ["#34c38f"],
+    colors: ["#3d8ef8"],
     xaxis: {
       categories: categories,
       labels: {
@@ -53,17 +53,17 @@ const Notifications = () => {
     },
     tooltip: {
       y: {
-        formatter: function(val) { return val + " notification(s)"; }
+        formatter: function(val) { return val + " students"; }
       }
     }
   };
-  const barSeries = [{ name: "Notifications", data }];
+  const barSeries = [{ name: "CBT Levels", data }];
   return (
     <React.Fragment>
       <Col lg={4}>
-        <Card>
+        <Card className={cardClassName} style={cardClassName === 'transparent-card' ? { background: 'transparent', boxShadow: 'none' } : {}}>
           <CardBody>
-            <CardTitle>Notifications</CardTitle>
+            <CardTitle>CBT Levels</CardTitle>
             <div className="pe-3">
               <ReactApexChart
                 options={barOptions}

@@ -22,11 +22,11 @@ import {
 } from "../../constants/layout";
 
 const INIT_STATE = {
-  layoutType: layoutTypes.HORIZONTAL,
+  layoutType: layoutTypes.VERTICAL,
   layoutModeTypes: layoutModeTypes.LIGHTMODE,
   layoutWidth: layoutWidthTypes.FLUID,
   leftSideBarTheme: leftSideBarThemeTypes.DARK,
-  leftSideBarType: leftSidebarTypes.DEFAULT,
+  leftSideBarType: leftSidebarTypes.ICON,
   topbarTheme: topBarThemeTypes.DARK,
   showRightSidebar: false,
   isMobile: false,

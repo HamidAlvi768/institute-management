@@ -18,7 +18,6 @@ const Dashboard = () => {
     <React.Fragment>
       <div className="page-content">
         <Container fluid={true}>
-          <Breadcrumbs title="Navttc" breadcrumbItem="Dashboard" />
           {/* User Panel Charts */}
           <UsePanel />
 
@@ -34,12 +33,8 @@ const Dashboard = () => {
             <OrderStatus />
             {/* Notifications */}
             <Notifications />
-            {/* Revenue by Location Vector Map */}
-            <RevenueByLocation />
           </Row>
 
-          {/* Latest Transaction Table */}
-          <LatestTransation />
         </Container>
       </div>
     </React.Fragment>

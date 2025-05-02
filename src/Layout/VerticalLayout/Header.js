@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -68,27 +68,37 @@ const Header = (props) => {
       <header id="page-topbar">
         <div className="navbar-header">
           <div className="d-flex">
-            <div className="navbar-brand-box text-center">
-              <Link to="/" className="logo logo-dark">
+            <div className="navbar-brand-box">
+              {/* <Link to="/" className="logo logo-dark">
                 <span className="logo-sm">
-                  <img src={logoSm} alt="logo-sm-dark" height="22" />
+                  <img src={logoSm} alt="logo-sm-dark" height="10" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logoDark} alt="logo-dark" height="24" />
+                  <img src={logoDark} alt="logo-dark" height="10" />
                 </span>
               </Link>
 
               <Link to="/" className="logo logo-light">
                 <span className="logo-sm">
-                  <img src={logoSm} alt="logo-sm-light" height="22" />
+                  <img src={logoSm} alt="logo-sm-light" height="10" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logoLight} alt="logo-light" height="24" />
+                  <img src={logoLight} alt="logo-light" height="10" />
                 </span>
-              </Link>
+              </Link> */}
+              <button
+                type="button"
+                className="btn btn-sm px-3 font-size-24 header-item waves-effect"
+                id="vertical-menu-btn"
+                onClick={() => {
+                  tToggle();
+                }}
+              >
+                <i className="ri-menu-2-line align-middle"></i>
+              </button>
             </div>
 
-            <button
+            {/* <button
               type="button"
               className="btn btn-sm px-3 font-size-24 header-item waves-effect"
               id="vertical-menu-btn"
@@ -97,7 +107,10 @@ const Header = (props) => {
               }}
             >
               <i className="ri-menu-2-line align-middle"></i>
-            </button>
+            </button> */}
+            <div className="flex align-items-center">
+              <h2 className="dashboard-title">NVTTC Dashboard</h2>
+            </div>
 
             <form className="app-search d-none d-lg-block">
               <div className="position-relative">
@@ -150,10 +163,6 @@ const Header = (props) => {
                 </form>
               </div>
             </div>
-
-            <LanguageDropdown />
-            <AppsDropdown />
-
             <div className="dropdown d-none d-lg-inline-block ms-1">
               <button
                 type="button"
@@ -166,12 +175,7 @@ const Header = (props) => {
                 <i className="ri-fullscreen-line" />
               </button>
             </div>
-
-            <NotificationDropdown />
-
-            <ProfileMenu />
-
-            <div
+            {/* <div
               className="dropdown d-inline-block"
               onClick={() => {
                 props.showRightSidebarAction(!props.showRightSidebar);
@@ -183,7 +187,7 @@ const Header = (props) => {
               >
                 <i className="mdi mdi-cog"></i>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>

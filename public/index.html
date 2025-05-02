@@ -1,24 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Upzet - React Admin & Dashboard Template</title>
+    <style>
+      body {
+        background-color: #1b5642;
+      }
+      #root {
+        background-color: #1b5642;
+      }
+      #layout-wrapper {
+        background-color: #f7f4f4;
+        /* border: 1px solid #ffffff;
+        border-radius: 10px; */
+      }
+      .header-item{
+        color: #1b5642;
+      }
+      .vertical-collpsed .vertical-menu #sidebar-menu > ul > li > a i {
+        font-size: 20px;
+        margin-left: 4px;
+        background: #25775b;
+        padding: 8px;
+        border-radius: 8px;
+        margin-left: -2px;
+      }
+      .dashboard-title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #1b5642;
+        margin-left: 10px;
+      }
+      .st-card-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #1b5642;
+      }
+      .st-card-num {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #1b5642;
+      }
+    </style>
 
-  <title>Upzet - React Admin & Dashboard Template</title>
-</head>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-
-</body>
-
+  <body class="right-bar-enabled vertical-collpsed sidebar-enable">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>

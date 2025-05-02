@@ -29,7 +29,7 @@
     --#{$prefix}header-item-color: #636e75;
     --#{$prefix}header-height: 70px;
     --#{$prefix}navbar-brand-box-width: 250px;
-    --#{$prefix}header-dark-bg: #1b5642;
+    --#{$prefix}header-dark-bg: #ffffff;
 
     --#{$prefix}display-block: block;
     --#{$prefix}display-none: none;
@@ -56,7 +56,7 @@
 
     // Vertical Sidebar - Dark
     [data-sidebar="dark"] {
-        --#{$prefix}sidebar-dark-bg: #1b2c3f; //2c313a
+        --#{$prefix}sidebar-dark-bg: #1b5642; //2c313a
         --#{$prefix}sidebar-dark-menu-item-color: #8590a5;
         --#{$prefix}sidebar-menu-item-hover-color: #d7e4ec;
         --#{$prefix}sidebar-dark-menu-sub-item-color: #8590a5;

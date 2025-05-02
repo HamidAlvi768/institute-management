@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 
 import { OverViewData } from '../../CommonData/Data/index';
+import MapPakistan from './MapPakistan';
 
 
 const OverView = () => {
@@ -27,31 +28,26 @@ const OverView = () => {
                                         ALL
                                     </button>
                                     <button type="button" className="btn btn-soft-primary btn-sm me-1">
-                                        1M
+                                        Punjab
                                     </button>
                                     <button type="button" className="btn btn-soft-secondary btn-sm me-1">
-                                        6M
+                                        Sindh
                                     </button>
                                     <button type="button" className="btn btn-soft-secondary btn-sm me-1 active">
-                                        1Y
+                                        Balochistan
+                                    </button>
+                                    <button type="button" className="btn btn-soft-secondary btn-sm me-1 active">
+                                        KPK
+                                    </button>
+
+                                    <button type="button" className="btn btn-soft-secondary btn-sm me-1 active">
+                                        Islamabad
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <LineColumnArea />
-                        </div>
-                    </CardBody>
-                    <CardBody className="border-top">
-                        <div className="text-muted text-center">
-                            <Row>
-                                {OverViewData.map((item, key) => (<Col md={4} key={key} className="border-end">
-                                    <div>
-                                        <p className="mb-2"><i className={"mdi mdi-circle font-size-12 me-1 text-" + item.color}></i> {item.title}</p>
-                                        <h5 className="font-size-16 mb-0">$ {item.count} <span className="text-success font-size-12"><i className="mdi mdi-menu-up font-size-14 me-1"></i>{item.percentage} %</span></h5>
-                                    </div>
-                                </Col>))}
-                            </Row>
+                            <MapPakistan />
                         </div>
                     </CardBody>
                 </Card>

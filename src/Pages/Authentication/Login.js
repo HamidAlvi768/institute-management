@@ -123,7 +123,7 @@ const Login = (props) => {
                 <CardBody className="p-4">
                   <div>
                     <div className="text-center">
-                      <Link to="/">
+                      {/* <Link to="/">
                         <img
                           src={logodark}
                           alt=""
@@ -136,7 +136,7 @@ const Login = (props) => {
                           height="24"
                           className="auth-logo logo-light mx-auto"
                         />
-                      </Link>
+                      </Link> */}
                     </div>
                     <h4 className="font-size-18 text-muted mt-2 text-center">
                       Welcome Back !
@@ -243,12 +243,12 @@ const Login = (props) => {
                               Log In
                             </button>
                           </div>
-                          <div className="mt-4 text-center">
+                         {/*  <div className="mt-4 text-center">
                             <h5 className="font-size-14 mb-3">Sign in with</h5>
 
                             <ul className="list-inline">
                               <li className="list-inline-item">
-                                {/* <FacebookLogin
+                                <FacebookLogin
                                   appId={facebook.APP_ID}
                                   autoLoad={false}
                                   callback={facebookResponse}
@@ -261,7 +261,7 @@ const Login = (props) => {
                                       <i className="mdi mdi-facebook" />
                                     </Link>
                                   )}
-                                /> */}
+                                />
 
                                 <Link
                                   to="#"
@@ -276,7 +276,7 @@ const Login = (props) => {
                               </li>
 
                               <li className="list-inline-item">
-                                {/* <GoogleLogin
+                               <GoogleLogin
                                   clientId={google.CLIENT_ID}
                                   render={(renderProps) => (
                                     <Link
@@ -289,7 +289,7 @@ const Login = (props) => {
                                   )}
                                   onSuccess={googleResponse}
                                   onFailure={() => {}}
-                                /> */}
+                                /> 
                                 <Link
                                   to="#"
                                   className="btn btn-danger btn-icon me-1"
@@ -302,7 +302,7 @@ const Login = (props) => {
                                 </Link>
                               </li>
                             </ul>
-                          </div>
+                          </div> */}
                         </Col>
                       </Row>
                     </Form>
@@ -310,17 +310,17 @@ const Login = (props) => {
                 </CardBody>
               </Card>
               <div className="mt-5 text-center">
-                <p className="text-white-50">
+                {/* <p className="text-white-50">
                   Don't have an account ?{" "}
                   <Link to="/register" className="fw-medium text-primary">
                     {" "}
                     Register{" "}
                   </Link>{" "}
-                </p>
-                <p className="text-white-50">
+                </p> */}
+                {/* <p className="text-white-50">
                   © {new Date().getFullYear()} Navttc. Crafted with{" "}
                   <i className="mdi mdi-heart text-danger"></i> by Themesdesign
-                </p>
+                </p> */}
               </div>
             </Col>
           </Row>

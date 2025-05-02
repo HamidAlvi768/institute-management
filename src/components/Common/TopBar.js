@@ -14,13 +14,22 @@ import LanguageDropdown from "./TopbarDropdown/LanguageDropdown";
 import AppsDropdown from "./TopbarDropdown/AppsDropdown";
 
 const TopBar = () => {
+  function tToggle() {
+    var body = document.body;
+    if (window.screen.width <= 998) {
+      body.classList.toggle("sidebar-enable");
+    } else {
+      body.classList.toggle("vertical-collpsed");
+      body.classList.toggle("sidebar-enable");
+    }
+  }
   return (
     <React.Fragment>
       <header id="page-topbar">
         <div className="navbar-header">
           <div className="d-flex">
             <div className="navbar-brand-box text-center">
-              <a href="#" className="logo logo-dark">
+              {/* <a href="#" className="logo logo-dark">
                 <span className="logo-sm">
                   <img src={logosm} alt="logo-sm-dark" height="22" />
                 </span>
@@ -36,7 +45,17 @@ const TopBar = () => {
                 <span className="logo-lg">
                   <img src={logolight} alt="logo-light" height="50" />
                 </span>
-              </a>
+              </a> */}
+              <button
+                type="button"
+                className="btn btn-sm px-3 font-size-24 header-item waves-effect"
+                id="vertical-menu-btn"
+                onClick={() => {
+                  tToggle();
+                }}
+              >
+                <i className="ri-menu-2-line align-middle"></i>
+              </button>
             </div>
 
             <button

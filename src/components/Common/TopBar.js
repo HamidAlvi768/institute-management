@@ -2,7 +2,7 @@ import React from "react";
 
 import logosm from "../../assets/images/logo-sm.png";
 import logodark from "../../assets/images/logo-dark.png";
-import logolight from "../../assets/images/logo-light.png";
+import logolight from "../../assets/images/logo-light.webp";
 
 // import component
 import ProfileMenu from "./TopbarDropdown/ProfileMenu";
@@ -34,7 +34,7 @@ const TopBar = () => {
                   <img src={logosm} alt="logo-sm-light" height="22" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logolight} alt="logo-light" height="24" />
+                  <img src={logolight} alt="logo-light" height="50" />
                 </span>
               </a>
             </div>

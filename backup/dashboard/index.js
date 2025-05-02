@@ -6,12 +6,12 @@ import { Container } from "reactstrap";
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const Dashboard = () => {
-  document.title = "Dashboard | Upzet - React Admin & Dashboard Template";
+  document.title = "Dashboard | Navttc - React Admin & Dashboard Template";
   return (
     <React.Fragment>
       <div className="page-content">
         <Container fluid={true}>
-          <Breadcrumbs title="Upzet" breadcrumbItem="Dashboard" />
+          <Breadcrumbs title="Navttc" breadcrumbItem="Dashboard" />
         </Container>
       </div>
     </React.Fragment>

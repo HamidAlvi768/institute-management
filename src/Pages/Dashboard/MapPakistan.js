@@ -1,3 +1,4 @@
+/* global Highcharts topojson turf */
 import React, { useState, useEffect, useRef } from 'react';
 
 

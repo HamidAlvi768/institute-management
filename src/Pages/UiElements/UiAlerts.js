@@ -6,7 +6,7 @@ import { Container, Col, Row, Card, CardBody, CardTitle, CardSubtitle, Uncontrol
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const UiAlerts = () => {
-  document.title = "Alerts | Upzet - React Admin & Dashboard Template";
+  document.title = "Alerts | Navttc - React Admin & Dashboard Template";
 
   const alertPlaceholderRef = useRef(null);
 

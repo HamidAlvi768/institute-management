@@ -7,7 +7,7 @@ import { Container, Row, Col, Card, CardBody } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
-    document.title = "Register | Upzet - React Admin & Dashboard Template";
+    document.title = "Register | Navttc - React Admin & Dashboard Template";
     return (
         <React.Fragment>
 
@@ -27,7 +27,7 @@ const Register = () => {
                                         </div>
 
                                         <h4 className="font-size-18 text-muted text-center mt-2">Free Register</h4>
-                                        <p className="text-muted text-center mb-4">Get your free Upzet account now.</p>
+                                        <p className="text-muted text-center mb-4">Get your free Navttc account now.</p>
                                         <form className="form-horizontal" action="#">
 
                                             <Row>
@@ -58,7 +58,7 @@ const Register = () => {
                                 </Card>
                                 <div className="mt-5 text-center">
                                     <p className="text-white-50">Already have an account ?<Link to="/auth-login" className="fw-medium text-primary"> Login </Link> </p>
-                                    <p className="text-white-50">© {new Date().getFullYear()} Upzet. Crafted with <i className="mdi mdi-heart text-danger"></i> by Themesdesign</p>
+                                    <p className="text-white-50">© {new Date().getFullYear()} Navttc. Crafted with <i className="mdi mdi-heart text-danger"></i> by Themesdesign</p>
                                 </div>
                             </Col>
                         </Row>

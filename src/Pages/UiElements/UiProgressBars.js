@@ -13,7 +13,7 @@ import {
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const UiProgressbar = () => {
-  document.title = "Progress Bars | Upzet - React Admin & Dashboard Template";
+  document.title = "Progress Bars | Navttc - React Admin & Dashboard Template";
 
   return (
     <React.Fragment>

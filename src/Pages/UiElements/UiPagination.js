@@ -7,7 +7,7 @@ import { Container, Col, Row, Card, CardBody, CardTitle } from "reactstrap";
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const UiPagination = () => {
-    document.title = "Pagination | Upzet - React Admin & Dashboard Template";
+    document.title = "Pagination | Navttc - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ReactApexChart from "react-apexcharts";
 
 //SimpleBar
 import SimpleBar from "simplebar-react";
@@ -10,45 +11,67 @@ import { Card, CardBody, CardTitle, Col } from "reactstrap";
 import { NotificationsData } from "../../CommonData/Data/index";
 
 const Notifications = () => {
+  // Prepare data for the bar chart
+  const categories = NotificationsData.map(item => item.name);
+  // For demo, each notification is counted as 1 (since there are only 3)
+  const data = NotificationsData.map(() => 1);
+  const barOptions = {
+    chart: {
+      toolbar: { show: false },
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "45%",
+        endingShape: "rounded",
+      },
+    },
+    dataLabels: {
+      enabled: true,
+    },
+    colors: ["#34c38f"],
+    xaxis: {
+      categories: categories,
+      labels: {
+        rotate: -45,
+        style: { fontSize: '12px' }
+      },
+    },
+    yaxis: {
+      title: {
+        text: "Count",
+      },
+      min: 0,
+      forceNiceScale: true,
+      labels: {
+        stepSize: 1,
+        formatter: function(val) { return Math.round(val); }
+      }
+    },
+    grid: {
+      borderColor: "#f1f1f1",
+    },
+    tooltip: {
+      y: {
+        formatter: function(val) { return val + " notification(s)"; }
+      }
+    }
+  };
+  const barSeries = [{ name: "Notifications", data }];
   return (
     <React.Fragment>
       <Col lg={4}>
         <Card>
           <CardBody>
             <CardTitle>Notifications</CardTitle>
-
             <div className="pe-3">
-              <SimpleBar style={{ maxHeight: "287px" }}>
-                {NotificationsData.map((item, key) => (
-                  <Link key={key} to="#" className="text-body d-block">
-                    <div className="d-flex py-3">
-                      <div className="flex-shrink-0 me-3 align-self-center">
-                        {item.src ? (
-                          <img
-                            className="rounded-circle avatar-xs"
-                            alt=""
-                            src={item.src}
-                          />
-                        ) : (
-                          <div className="avatar-xs">
-                            <span className="avatar-title bg-primary-subtle rounded-circle text-primary">
-                              <i className={item.icon}></i>
-                            </span>
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="flex-grow-1 overflow-hidden">
-                        <h5 className="font-size-14 mb-1">{item.name}</h5>
-                        <p className="text-truncate mb-0">{item.desc}</p>
-                      </div>
-                      <div className="flex-shrink-0 font-size-13">
-                        {item.time}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </SimpleBar>
+              <ReactApexChart
+                options={barOptions}
+                series={barSeries}
+                type="bar"
+                height={287}
+                className="apex-charts"
+              />
             </div>
           </CardBody>
         </Card>

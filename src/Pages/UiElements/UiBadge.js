@@ -7,7 +7,7 @@ import { Container, Col, Row, Card, CardBody, CardTitle } from "reactstrap";
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 
 const UiBadge = () => {
-    document.title = "Badges | Upzet - React Admin & Dashboard Template";
+    document.title = "Badges | Navttc - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>

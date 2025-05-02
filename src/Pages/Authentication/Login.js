@@ -40,7 +40,7 @@ import { loginUser, socialLogin } from "../../store/actions";
 import { createSelector } from "reselect";
 
 const Login = (props) => {
-  document.title = "Login | Upzet - React Admin & Dashboard Template";
+  document.title = "Login | Navttc - React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -142,7 +142,7 @@ const Login = (props) => {
                       Welcome Back !
                     </h4>
                     <p className="mb-5 text-center">
-                      Sign in to continue to Upzet.
+                      Sign in to continue to Navttc.
                     </p>
                     <Form
                       className="form-horizontal"
@@ -318,7 +318,7 @@ const Login = (props) => {
                   </Link>{" "}
                 </p>
                 <p className="text-white-50">
-                  © {new Date().getFullYear()} Upzet. Crafted with{" "}
+                  © {new Date().getFullYear()} Navttc. Crafted with{" "}
                   <i className="mdi mdi-heart text-danger"></i> by Themesdesign
                 </p>
               </div>

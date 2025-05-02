@@ -8,7 +8,7 @@ import "rc-slider/assets/index.css";
 
 
 const UiRangeSlider = () => {
-    document.title = "Range Slider | Upzet - React Admin & Dashboard Template";
+    document.title = "Range Slider | Navttc - React Admin & Dashboard Template";
 
     const [value, setValue] = useState(50);
 

@@ -163,7 +163,7 @@ const Header = (props) => {
             <NotificationDropdown />
             */}
 
-            <ProfileMenu />
+            {/* <ProfileMenu /> */}
 
             {/*
             <div

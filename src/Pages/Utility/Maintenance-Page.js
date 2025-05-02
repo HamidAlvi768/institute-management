@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const Maintenance = () => {
-    document.title = "Maintenance  | Upzet - React Admin & Dashboard Template";
+    document.title = "Maintenance  | Navttc - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>

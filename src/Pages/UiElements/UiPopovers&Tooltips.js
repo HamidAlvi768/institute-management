@@ -21,7 +21,7 @@ import {
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const UiPopovers = () => {
-    document.title = "Popovers & Tooltip | Upzet - React Admin & Dashboard Template";
+    document.title = "Popovers & Tooltip | Navttc - React Admin & Dashboard Template";
 
     const [popovertop, setpopovertop] = useState(false);
     const [popoverleft, setpopoverleft] = useState(false);

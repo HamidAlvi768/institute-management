@@ -9,7 +9,7 @@ import smallImage from "../../assets/images/small/img-1.jpg";
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const UiPlaceholders = () => {
-    document.title = "Placeholders | Upzet - React Admin & Dashboard Template";
+    document.title = "Placeholders | Navttc - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>

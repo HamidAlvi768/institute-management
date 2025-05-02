@@ -33,7 +33,7 @@ import { editProfile, resetProfileFlag } from "../../store/actions";
 import { createSelector } from 'reselect';
 
 const UserProfile = () => {
-  document.title = "Profile | Upzet - React Admin & Dashboard Template";
+  document.title = "Profile | Navttc - React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -92,7 +92,7 @@ const { error, success } = useSelector(userprofilepage);
     <React.Fragment>
         <div className="page-content">
           <Container fluid>
-            <Breadcrumb title="Upzet" breadcrumbItem="Profile" />
+            <Breadcrumb title="Navttc" breadcrumbItem="Profile" />
 
             <Row>
               <Col lg="12">

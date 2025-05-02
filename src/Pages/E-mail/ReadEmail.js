@@ -28,7 +28,7 @@ import img4 from "../../assets/images/small/img-4.jpg";
 
 
 const ReadEmail = () => {
-    document.title = "Read Email  | Upzet - React Admin & Dashboard Template";
+    document.title = "Read Email  | Navttc - React Admin & Dashboard Template";
     const [folderbtn, setfolderbtn] = useState(false);
     const [tagbtn, settagbtn] = useState(false);
     const [menubtn, setmenubtn] = useState(false);

@@ -9,7 +9,7 @@ import Countdown from "react-countdown";
 import { Link } from "react-router-dom";
 
 const ComingSoon = () => {
-  document.title = "Cooming Soon  | Upzet - React Admin & Dashboard Template";
+  document.title = "Cooming Soon  | Navttc - React Admin & Dashboard Template";
   // const renderer = ({ days, hours, minutes, seconds, completed }) => {
   //   if (completed) {
   //     // Render a completed state
@@ -93,7 +93,7 @@ const ComingSoon = () => {
                   </h5>
 
                   <h4 className="text-white mt-5">
-                    Let's get started with Upzet
+                    Let's get started with Navttc
                   </h4>
                   <p className="text-white-50">
                     It will be as simple as Occidental in fact it will be

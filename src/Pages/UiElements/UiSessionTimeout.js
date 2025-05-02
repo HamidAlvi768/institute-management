@@ -22,7 +22,7 @@ useEffect(() => {
     return () => clearTimeout(redirectTimeout);
   }, []);
 
-  document.title = "Session Timeout | Upzet - React Admin & Dashboard Template";
+  document.title = "Session Timeout | Navttc - React Admin & Dashboard Template";
 
   return (
     <React.Fragment>

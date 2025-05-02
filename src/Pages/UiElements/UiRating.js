@@ -8,7 +8,7 @@ import { Row, Col, Card, CardBody, Container } from "reactstrap";
 import Rating from "react-rating";
 
 const UiRating = () => {
-  document.title = "Rating | Upzet - React Admin & Dashboard Template";
+  document.title = "Rating | Navttc - React Admin & Dashboard Template";
 
   const [def, setdef] = useState("");
   const [customize, setcustomize] = useState("");

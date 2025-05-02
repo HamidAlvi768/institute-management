@@ -29,7 +29,7 @@
     --#{$prefix}header-item-color: #636e75;
     --#{$prefix}header-height: 70px;
     --#{$prefix}navbar-brand-box-width: 250px;
-    --#{$prefix}header-dark-bg: #252b3b;
+    --#{$prefix}header-dark-bg: #1b5642;
 
     --#{$prefix}display-block: block;
     --#{$prefix}display-none: none;
@@ -101,7 +101,7 @@
         // --#{$prefix}dark-rgb: #{to-rgb($light-dark)};
         --#{$prefix}header-bg: #272d3e;
 
-        --#{$prefix}header-dark-bg: #252b3b;
+        --#{$prefix}header-dark-bg: #1b5642;
         --#{$prefix}header-item-color: #919bae;
         // --#{$prefix}header-dark-mode-item-color: #c0c5cb;
         --#{$prefix}topbar-search-bg: #2b3244;
@@ -133,7 +133,7 @@
         --#{$prefix}sidebar-menu-sub-item-line-color: #eaecf1;
 
         // Vertical Sidebar - Dark
-        --#{$prefix}sidebar-dark-bg: #252b3b; //2c313a
+        --#{$prefix}sidebar-dark-bg: #1b5642; //2c313a
         --#{$prefix}sidebar-dark-menu-item-color: #afacbb;
         --#{$prefix}sidebar-dark-menu-sub-item-color: #afacbb;
         --#{$prefix}sidebar-dark-menu-item-icon-color: #ffffff;
@@ -143,7 +143,7 @@
         --#{$prefix}sidebar-dark-menu-sub-item-line-color: #505356;
 
         &[data-sidebar="dark"] {
-            --#{$prefix}sidebar-dark-bg: #252b3b;
+            --#{$prefix}sidebar-dark-bg: #1b5642;
             --#{$prefix}sidebar-dark-menu-item-color: #8590a5;
             --#{$prefix}sidebar-dark-menu-sub-item-color: #8590a5;
             --#{$prefix}sidebar-dark-menu-item-icon-color: #858d98;

@@ -58,7 +58,7 @@ const PricingData = [
 ];
 
 const Pricing = () => {
-  document.title = "Pricing  | Upzet - React Admin & Dashboard Template";
+  document.title = "Pricing  | Navttc - React Admin & Dashboard Template";
   return (
     <React.Fragment>
       <div className="page-content">

@@ -11,7 +11,7 @@ const SocialSource = () => {
           <CardBody>
             <div className="d-flex align-items-center">
               <div className="flex-grow-1">
-                <h5 className="card-title">Institute Metrics</h5>
+                <h5 className="card-title">Institute Analysis</h5>
               </div>
               <div className="flex-shrink-0">
                 <select className="form-select form-select-sm mb-0 my-n1">

@@ -98,7 +98,7 @@ const SocialSourceData = [
         title: "Government",
         count: "768",
         icon: "ri-government-line",
-        bgcolor: "primary"
+        bgcolor: "#000000"
     },
     {
         id: 2,

@@ -4,180 +4,134 @@ import img3 from "../../assets/images/users/avatar-3.jpg";
 import img6 from "../../assets/images/users/avatar-6.jpg";
 import img4 from "../../assets/images/users/avatar-4.jpg";
 
-
-// Latest Transation 
-
+// Latest Registrations
 const LatestTransationData = [
     {
-        id: "customCheck1",
-        clientId: "#AP1234",
-        clientName: "David Wiley",
-        src:img2,
-        date: "02 Nov, 2019",
-        price: "1234",
-        quantity: "1",
+        id: "ins_001",
+        clientId: "#INS-2023-001",
+        clientName: "National Technical Institute",
+        src: img2, // Replaced govtIcon with img2
+        date: "15 Oct, 2023",
+        price: "25",
+        quantity: "12",
         color: "success",
-        status: "Confirm"
+        status: "Active"
     },
     {
-        id: "customCheck2",
-        clientId: "#AP1235",
-        clientName: "Walter Jones",
-        date: "04 Nov, 2019",
-        price: "822",
-        quantity: "2",
-        color: "success",
-        status: "Confirm"
-    },
-    {
-        id: "customCheck3",
-        clientId: "#AP1236",
-        clientName: "Eric Ryder",
-        src:img3,
-        date: "	05 Nov, 2019",
-        price: "1153",
-        quantity: "1",
-        color: "danger",
-        status: "Cancel"
-    },
-    {
-        id: "customCheck4",
-        clientId: "#AP1237",
-        clientName: "Kenneth Jackson",
-        date: "06 Nov, 2019",
-        price: "1365",
-        quantity: "1",
-        color: "success",
-        status: "Confirm"
-    },
-    {
-        id: "customCheck5",
-        clientId: "#AP1238",
-        clientName: "Ronnie Spiller",
-        src:img6,
-        date: "08 Nov, 2019",
-        price: "740",
-        quantity: "2",
+        id: "ins_002",
+        clientId: "#INS-2023-002",
+        clientName: "Karachi Private College",
+        src: img3, // Replaced privateIcon with img3
+        date: "18 Oct, 2023",
+        price: "18",
+        quantity: "8",
         color: "warning",
-        status: "Pending"
+        status: "Pending Renewal"
+    },
+    {
+        id: "ins_003",
+        clientId: "#INS-2023-003",
+        clientName: "Lahore Vocational Center",
+        src: img4, // Assigned img4
+        date: "20 Oct, 2023",
+        price: "32",
+        quantity: "15",
+        color: "danger",
+        status: "Expired"
     },
 ];
 
-// Order Status
+// Registration Status
 const OrderStatusData = [
     {
         id: 1,
-        title: "Completed",
+        title: "Active",
         icon: "ri-checkbox-circle-line",
         color: "success",
-        width: "70",
+        width: "65",
     },
     {
         id: 2,
-        title: "Pending",
+        title: "Pending Renewal",
         icon: "ri-calendar-2-line",
         color: "warning",
-        width: "45",
+        width: "25",
     },
     {
         id: 3,
-        title: "Cancel",
+        title: "Expired",
         icon: "ri-close-circle-line",
         color: "danger",
-        width: "19",
+        width: "10",
     },
-]
+];
 
-// Overview
-
+// Key Metrics
 const OverViewData = [
     {
         id: 1,
-        title: "Expenses",
-        count: "8,524",
-        percentage: "1.2",
+        title: "Total Institutes",
+        count: "1,234",
+        percentage: "4.5",
         color: "primary"
     },
     {
         id: 2,
-        title: "Maintenance",
-        count: "8,524",
-        percentage: "2.0",
-        color: "light"
+        title: "Accredited",
+        count: "892",
+        percentage: "2.3",
+        color: "info"
     },
     {
         id: 3,
-        title: "Profit",
-        count: "8,524",
-        percentage: "0.4",
+        title: "Expiring Soon",
+        count: "89",
+        percentage: "-1.1",
         color: "danger"
     },
 ];
 
-// SocialSource
-
+// Institute Types
 const SocialSourceData = [
     {
         id: 1,
-        title: "Facebook",
-        count: "125",
-        icon: "ri ri-facebook-circle-fill",
+        title: "Government",
+        count: "768",
+        icon: "ri-government-line",
         bgcolor: "primary"
     },
     {
         id: 2,
-        title: "Twitter",
-        count: "112",
-        icon: "ri ri-twitter-fill text-white",
-        bgcolor: "info"
+        title: "Private",
+        count: "466",
+        icon: "ri-building-line",
+        bgcolor: "warning"
+    },
+];
+
+// Registration Alerts
+const NotificationsData = [
+    {
+        id: 1,
+        name: "Expiry Alert",
+        desc: "Peshawar Institute (ID: #INS-2021-045) registration expires in 7 days",
+        time: "2 hours ago",
+        icon: "mdi mdi-alert-outline"
+    },
+    {
+        id: 2,
+        name: "New Accreditation",
+        desc: "Quetta Technical College accredited with Grade A",
+        time: "1 day ago",
+        src: img6, // Replaced alertIcon with img6
     },
     {
         id: 3,
-        title: "Instagram",
-        count: "104",
-        icon: "ri ri-instagram-line text-white",
-        bgcolor: "danger"
+        name: "Infrastructure Update",
+        desc: "Islamabad Institute added 5 new labs",
+        time: "3 days ago",
+        icon: "mdi mdi-domain"
     },
 ];
- 
-// Notifications
 
-const NotificationsData = [
-    {
-        id:1,
-        name:"Scott Elliott",
-        desc:"If several languages coalesce",
-        time:" 20 min ago",
-        src:img2,        
-    },
-    {
-        id:2,
-        name:"Team A",
-        desc:"Team A Meeting 9:15 AM",
-        time:"9:00 am",
-        icon:"mdi mdi-account-supervisor"
-    },
-    {
-        id:3,
-        name:"Frank Martin",
-        desc:"Neque porro quisquam est",
-        time:" 8:54 am",
-        src:img3,        
-    },{
-        id:4,
-        name:"Updates",
-        desc:"It will be as simple as fact",
-        time:"27-03-2020",
-        icon:"mdi mdi-email-outline"       
-    },{
-        id:5,
-        name:"Terry Garrick",
-        desc:"At vero eos et accusamus et",
-        time:"27-03-2020",
-        src:img4,        
-    }
-
-];
-
-
-export { LatestTransationData, OrderStatusData, OverViewData, SocialSourceData, NotificationsData }
+export { LatestTransationData, OrderStatusData, OverViewData, SocialSourceData, NotificationsData };

@@ -66,7 +66,7 @@ const ProgramsPieChart = ({ cardClassName = '' }) => {
                   options={chartData.options}
                   series={chartData.series}
                   type="pie"
-                  height={320}
+                  height={395}
                   className="apex-charts"
                 />
               </ChartErrorBoundary>

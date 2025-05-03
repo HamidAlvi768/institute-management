@@ -6,7 +6,7 @@ const chartViews = {
   'Certifications': {
     series: [65, 35],
     options: {
-      labels: ['Local', 'International'],
+      labels: ['National', 'International'],
       colors: ['#3d8ef8', '#f1b44c'],
       legend: { show: true, position: 'bottom' },
       dataLabels: { enabled: true },

@@ -12,6 +12,7 @@ import InstituteMetricsChart from "./InstituteMetricsChart";
 import CombinedProgramsChart from "./CombinedProgramsChart";
 import CertificationTrainersChart from "./CertificationTrainersChart";
 import ProgramsTradesChart from "./ProgramsTradesChart";
+import EnrollmentPassoutChart from "./EnrollmentPassoutChart";
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 
@@ -35,12 +36,15 @@ const Dashboard = () => {
           <Row>
             <InstituteMetricsChart />
             <EnrollmentAnalyticsChart />
-            <EmploymentOutcomesChart />
+            <ProgramsTradesChart />
           </Row>
           <Row>
             <CombinedProgramsChart />
-            <ProgramsTradesChart />
             <CertificationTrainersChart />
+            <EmploymentOutcomesChart />
+          </Row>
+          <Row>
+            <EnrollmentPassoutChart />
           </Row>
         </Container>
       </div>

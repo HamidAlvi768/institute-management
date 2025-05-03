@@ -40,7 +40,7 @@ const Dashboard = () => {
             <SocialSource />
             <InstituteMetricsChart />
           </Row>
-          
+
           <NavTab />
 
         </Container>

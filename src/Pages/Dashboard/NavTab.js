@@ -20,6 +20,7 @@ import ProgramsPieChart from './ProgramsPieChart';
 
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
+import AffiliationBodiesChart from './AffiliationBodiesChart';
 
 const NavTab = () => {
     const [activeTab, setActiveTab] = useState('1');
@@ -32,7 +33,7 @@ const NavTab = () => {
         <div className="mb-4">
             <Nav tabs>
                 <NavItem>
-                    <NavLink style={{cursor:'pointer'}}
+                    <NavLink style={{ cursor: 'pointer' }}
                         className={classnames({ active: activeTab === '1' })}
                         onClick={() => toggleTab('1')}
                     >
@@ -40,7 +41,7 @@ const NavTab = () => {
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink style={{cursor:'pointer'}}
+                    <NavLink style={{ cursor: 'pointer' }}
                         className={classnames({ active: activeTab === '2' })}
                         onClick={() => toggleTab('2')}
                     >
@@ -48,7 +49,7 @@ const NavTab = () => {
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink style={{cursor:'pointer'}}
+                    <NavLink style={{ cursor: 'pointer' }}
                         className={classnames({ active: activeTab === '3' })}
                         onClick={() => toggleTab('3')}
                     >
@@ -56,7 +57,7 @@ const NavTab = () => {
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink style={{cursor:'pointer'}}
+                    <NavLink style={{ cursor: 'pointer' }}
                         className={classnames({ active: activeTab === '4' })}
                         onClick={() => toggleTab('4')}
                     >
@@ -64,7 +65,7 @@ const NavTab = () => {
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink style={{cursor:'pointer'}}
+                    <NavLink style={{ cursor: 'pointer' }}
                         className={classnames({ active: activeTab === '5' })}
                         onClick={() => toggleTab('5')}
                     >
@@ -72,7 +73,7 @@ const NavTab = () => {
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink style={{cursor:'pointer'}}
+                    <NavLink style={{ cursor: 'pointer' }}
                         className={classnames({ active: activeTab === '6' })}
                         onClick={() => toggleTab('6')}
                     >
@@ -93,6 +94,19 @@ const NavTab = () => {
                         <CertificationTrainersChart />
                         <EmploymentOutcomesChart />
                         <SectorsAnalytics />
+
+                        {/*  */}
+                        <EnrollmentAnalyticsChart />
+                        <ProgramsTradesChart />
+                        <CombinedProgramsChart />
+
+                        <CertificationTrainersChart />
+                        <ProgramsPieChart />
+                        <EnrollmentPassoutChart />
+
+                        <EmploymentOutcomesChart />
+                        <SectorsAnalytics />
+                        <AffiliationBodiesChart />
                     </Row>
                 </TabPane>
                 <TabPane tabId="2">
@@ -118,7 +132,7 @@ const NavTab = () => {
                     </Row>
                 </TabPane>
             </TabContent>
-        </div>
+        </div >
     );
 }
 

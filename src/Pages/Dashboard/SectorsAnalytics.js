@@ -28,7 +28,7 @@ const SectorsAnalytics = () => {
 
   return (
     <React.Fragment>
-       <Col xl={4}>
+      <Col xl={4}>
         <Card>
           <CardBody>
             <div className="d-flex align-items-center">

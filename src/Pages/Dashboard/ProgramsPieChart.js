@@ -19,7 +19,7 @@ class ChartErrorBoundary extends Component {
 }
 
 const chartData = {
-  series: [70, 30], // Simplified series for pie chart
+  series: [50, 35, 25], // Simplified series for pie chart
   options: {
     chart: {
       type: 'pie',
@@ -27,14 +27,20 @@ const chartData = {
       width: '100%', // Ensure chart takes full container width
       height: 320,
     },
-    labels: ['Govt Funded', 'Private Funded'],
-    colors: ['#3d8ef8', '#f1b44c'],
+    labels: ['Govt Funded', 'Private Funded', 'NGO Funded'],
+    colors: ['#1b5642', '#a9cd98', '#f1b44c'],
     legend: {
       show: true,
       position: 'bottom',
     },
     dataLabels: {
       enabled: true,
+    },
+    tooltip: {
+      theme: 'dark',
+      style: {
+        color: '#fff'
+      }
     },
     responsive: [
       {

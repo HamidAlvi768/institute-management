@@ -10,7 +10,7 @@ const chartData = {
     options: {
       chart: { type: 'bar', toolbar: { show: false } },
       xaxis: { categories: ['Level 1', 'Level 2', 'Level 3'] },
-      colors: ['#11c46e'],
+      colors: ['#1b5642', '#a9cd98'],
       plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
       dataLabels: { enabled: true },
       title: {
@@ -28,7 +28,7 @@ const chartData = {
     options: {
       chart: { type: 'bar', toolbar: { show: false } },
       xaxis: { categories: ['3 Months', '6 Months', '1 Year', '2 Years'] },
-      colors: ['#f1b44c'],
+      colors: ['#1b5642', '#a9cd98'],
       plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
       dataLabels: { enabled: true },
       title: {

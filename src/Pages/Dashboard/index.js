@@ -14,6 +14,8 @@ import CertificationTrainersChart from "./CertificationTrainersChart";
 import ProgramsTradesChart from "./ProgramsTradesChart";
 import EnrollmentPassoutChart from "./EnrollmentPassoutChart";
 import SectorsAnalytics from "./SectorsAnalytics";
+import ProgramsPieChart from './ProgramsPieChart';
+
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 
@@ -52,6 +54,7 @@ const Dashboard = () => {
           <Row>
             <SectorsAnalytics />
             <EnrollmentPassoutChart />
+            <ProgramsPieChart />
           </Row>
 
         </Container>

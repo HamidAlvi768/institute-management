@@ -47,7 +47,7 @@ const OrderStatus = ({ cardClassName = "" }) => {
         <React.Fragment>
             <Col xl={4}>
                 <Card className={cardClassName} style={cardClassName === 'transparent-card' ? { background: 'transparent', boxShadow: 'none' } : {}}>
-                    <CardBody>
+                    <CardBody className="pb-0">
                         <CardTitle>Course Type</CardTitle>
                         <div className="mb-4">
                             <ReactApexChart

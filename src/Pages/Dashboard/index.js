@@ -6,6 +6,11 @@ import SocialSource from "./SocialSource";
 import OverView from "./OverView";
 import RevenueByLocation from "./RevenueByLocation";
 import LatestTransation from "./LatestTransation";
+import EnrollmentAnalyticsChart from "./EnrollmentAnalyticsChart";
+import EmploymentOutcomesChart from "./EmploymentOutcomesChart";
+import InstituteMetricsChart from "./InstituteMetricsChart";
+import ProgramsTradesChart from "./ProgramsTradesChart";
+import CertificationTrainersChart from "./CertificationTrainersChart";
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 
@@ -44,6 +49,16 @@ const Dashboard = () => {
             </Col>
           </Row>
 
+          {/* New Dashboard Charts: 3 in one row */}
+          <Row>
+            <EnrollmentAnalyticsChart />
+            <EmploymentOutcomesChart />
+            <InstituteMetricsChart />
+          </Row>
+          <Row>
+            <ProgramsTradesChart />
+            <CertificationTrainersChart />
+          </Row>
         </Container>
       </div>
     </React.Fragment>

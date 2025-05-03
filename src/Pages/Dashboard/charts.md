@@ -57,7 +57,7 @@ Here’s a refined, **minimalist yet comprehensive guide** for your dashboard, f
 ### **5. Certification & Trainers**  
 **Primary Chart:** Tabbed dual-view card  
 **Toggleable Views:**  
-- **Certifications**: Local vs. International (Pie chart).  
+- **Certifications**: National vs. International (Pie chart).  
 - **Trainers**: Certified vs. Non-Certified (Radial progress bar).  
 
 **Interaction:**  

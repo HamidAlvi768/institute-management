@@ -48,7 +48,7 @@ const CombinedProgramsChart = ({ cardClassName = '' }) => {
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">
-              <CardTitle tag="h5">Programs Distribution</CardTitle>
+              <CardTitle tag="h5">Trade Distribution</CardTitle>
             </div>
             <div className="mb-4">
               <ReactApexChart

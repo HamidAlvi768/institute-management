@@ -55,7 +55,7 @@ const ProgramsTradesChart = ({ cardClassName = '' }) => {
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">
-              <CardTitle tag="h5">Programs & Trades</CardTitle>
+              <CardTitle tag="h5">Trades</CardTitle>
             </div>
             <Nav tabs className="mb-3">
               {Object.keys(chartViews).map((tab) => (

@@ -98,7 +98,7 @@ const EnrollmentAnalyticsChart = ({ cardClassName = '' }) => {
                 options={chartData.options}
                 series={chartData.series}
                 type={chartData.type}
-                height={390}
+                height={320}
                 className="apex-charts"
               />
             </div>

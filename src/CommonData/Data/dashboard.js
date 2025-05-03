@@ -134,4 +134,74 @@ const NotificationsData = [
     },
 ];
 
-export { LatestTransationData, OrderStatusData, OverViewData, SocialSourceData, NotificationsData };
+// Affiliation Bodies by Province/State
+const AffiliationBodyData = [
+    {
+        id: 1,
+        name: "NAVTTC",
+        provinces: [
+            { name: "Punjab", count: 45 },
+            { name: "Sindh", count: 32 },
+            { name: "KPK", count: 28 },
+            { name: "Balochistan", count: 21 }
+        ],
+        color: "#3b82f6"
+    },
+    {
+        id: 2,
+        name: "PBTE",
+        provinces: [
+            { name: "Punjab", count: 36 },
+            { name: "Sindh", count: 0 },
+            { name: "KPK", count: 0 },
+            { name: "Balochistan", count: 0 }
+        ],
+        color: "#f59e0b"
+    },
+    {
+        id: 3,
+        name: "SBTE",
+        provinces: [
+            { name: "Punjab", count: 0 },
+            { name: "Sindh", count: 29 },
+            { name: "KPK", count: 0 },
+            { name: "Balochistan", count: 0 }
+        ],
+        color: "#10b981"
+    },
+    {
+        id: 4,
+        name: "KBTE",
+        provinces: [
+            { name: "Punjab", count: 0 },
+            { name: "Sindh", count: 0 },
+            { name: "KPK", count: 25 },
+            { name: "Balochistan", count: 0 }
+        ],
+        color: "#ef4444"
+    },
+    {
+        id: 5,
+        name: "PVTC",
+        provinces: [
+            { name: "Punjab", count: 32 },
+            { name: "Sindh", count: 18 },
+            { name: "KPK", count: 15 },
+            { name: "Balochistan", count: 10 }
+        ],
+        color: "#8b5cf6"
+    },
+    {
+        id: 6,
+        name: "PCDA",
+        provinces: [
+            { name: "Punjab", count: 15 },
+            { name: "Sindh", count: 12 },
+            { name: "KPK", count: 9 },
+            { name: "Balochistan", count: 7 }
+        ],
+        color: "#ec4899"
+    }
+];
+
+export { LatestTransationData, OrderStatusData, OverViewData, SocialSourceData, NotificationsData, AffiliationBodyData };

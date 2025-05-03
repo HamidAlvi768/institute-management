@@ -55,7 +55,7 @@ const CombinedProgramsChart = ({ cardClassName = '' }) => {
                 options={chartData['CBT Levels'].options}
                 series={chartData['CBT Levels'].series}
                 type={chartData['CBT Levels'].type}
-                height={160}
+                height={190}
                 className="apex-charts"
               />
             </div>
@@ -64,7 +64,7 @@ const CombinedProgramsChart = ({ cardClassName = '' }) => {
                 options={chartData['Conventional Duration'].options}
                 series={chartData['Conventional Duration'].series}
                 type={chartData['Conventional Duration'].type}
-                height={160}
+                height={190}
                 className="apex-charts"
               />
             </div>

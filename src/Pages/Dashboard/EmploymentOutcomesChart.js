@@ -69,7 +69,7 @@ const EmploymentOutcomesChart = ({ cardClassName = '' }) => {
                 options={chartData.options}
                 series={chartData.series}
                 type={chartData.type}
-                height={370}
+                height={380}
                 className="apex-charts"
               />
             </div>

@@ -2,10 +2,10 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 
 const dountchartData = {
-  series: [25.6, 32.0, 23.8, 9.9, 8.7],
+  series: [25.6, 32.0, 23.8, 9.9],
   options: {
-    labels: ["IT", "Healthcare", "Finance", "Manufacturing", "Education"],
-    colors: ["rgb(61, 142, 248)", "rgb(17, 196, 110)", "#f1b44c", "#f46a6a", "rgb(239, 242, 247)"],
+    labels: ["IT", "Healthcare", "Finance", "Manufacturing"],
+    colors: ["rgb(61, 142, 248)", "rgb(17, 196, 110)", "#f1b44c", "#f46a6a"],
     legend: {
       show: true,
       position: "bottom",
@@ -41,7 +41,7 @@ const dountchart = () => {
         options={dountchartData.options}
         series={dountchartData.series}
         type="donut"
-        height="400"
+        height="390"
         className="apex-charts"
       />
     </React.Fragment>
@@ -49,5 +49,3 @@ const dountchart = () => {
 }
 
 export default dountchart;
-
-

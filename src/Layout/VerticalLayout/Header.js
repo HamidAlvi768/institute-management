@@ -128,7 +128,7 @@ const Header = (props) => {
           </div>
 
           <div className="d-flex">
-            <div className="dropdown d-inline-block d-lg-none ms-2">
+            {/* <div className="dropdown d-inline-block d-lg-none ms-2">
               <button
                 onClick={() => {
                   setsearch(!search);
@@ -165,7 +165,8 @@ const Header = (props) => {
                   </div>
                 </form>
               </div>
-            </div>
+            </div> */}
+
             <div className="dropdown d-none d-lg-inline-block ms-1">
               <button
                 type="button"
@@ -175,9 +176,10 @@ const Header = (props) => {
                 className="btn header-item noti-icon"
                 data-toggle="fullscreen"
               >
-                <i className="ri-fullscreen-line" />
+                <i className="ri-fullscreen-line" style={{ color: '#1b5642' }} />
               </button>
             </div>
+
             {/* <div
               className="dropdown d-inline-block"
               onClick={() => {
@@ -191,6 +193,7 @@ const Header = (props) => {
                 <i className="mdi mdi-cog"></i>
               </button>
             </div> */}
+
           </div>
         </div>
       </header>

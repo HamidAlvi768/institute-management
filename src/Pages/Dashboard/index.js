@@ -9,8 +9,9 @@ import LatestTransation from "./LatestTransation";
 import EnrollmentAnalyticsChart from "./EnrollmentAnalyticsChart";
 import EmploymentOutcomesChart from "./EmploymentOutcomesChart";
 import InstituteMetricsChart from "./InstituteMetricsChart";
-import ProgramsTradesChart from "./ProgramsTradesChart";
+import CombinedProgramsChart from "./CombinedProgramsChart";
 import CertificationTrainersChart from "./CertificationTrainersChart";
+import ProgramsTradesChart from "./ProgramsTradesChart";
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 
@@ -30,29 +31,14 @@ const Dashboard = () => {
             <SocialSource />
           </Row>
 
-          <Row>
-            {/* Parent Card for Course Metrics Section */}
-            <Col xl={12}>
-              <Card>
-                <CardBody>
-                  <CardTitle tag="h4">Course & Training Metrics</CardTitle>
-                  <Row>
-                    <OrderStatus cardClassName="transparent-card" />
-                    <Notifications cardClassName="transparent-card" />
-                    <RevenueByLocation cardClassName="transparent-card" />
-                  </Row>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-
           {/* New Dashboard Charts: 3 in one row */}
           <Row>
+            <InstituteMetricsChart />
             <EnrollmentAnalyticsChart />
             <EmploymentOutcomesChart />
-            <InstituteMetricsChart />
           </Row>
           <Row>
+            <CombinedProgramsChart />
             <ProgramsTradesChart />
             <CertificationTrainersChart />
           </Row>

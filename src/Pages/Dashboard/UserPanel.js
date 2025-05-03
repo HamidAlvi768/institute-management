@@ -59,7 +59,7 @@ const UserPanel = () => {
                   </div>
                 </div>
                 <div className="flex-grow-1 overflow-hidden">
-                  <p className="mb-1 st-card-title">Bord Registerd</p>
+                  <p className="mb-1 st-card-title">Board Registered</p>
                   <h5 className="mb-3 st-card-num">435</h5>
                 </div>
               </div>

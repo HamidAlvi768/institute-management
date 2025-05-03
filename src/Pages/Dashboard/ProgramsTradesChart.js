@@ -3,6 +3,19 @@ import { Card, CardBody, CardTitle, Col, Nav, NavItem, NavLink } from 'reactstra
 import ReactApexChart from 'react-apexcharts';
 
 const chartViews = {
+  'Top Trades': {
+    series: [
+      { name: 'Enrollments', data: [150, 130, 110, 90, 70] },
+    ],
+    options: {
+      chart: { type: 'bar', toolbar: { show: false } },
+      xaxis: { categories: ['Web Development', 'Nursing', 'Auto Mechanics', 'Fashion Design', 'Electrical'] },
+      colors: ['#f1b44c'],
+      plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
+      dataLabels: { enabled: true },
+    },
+    type: 'bar',
+  },
   'Sector-wise': {
     series: [
       { name: 'Programs', data: [120, 100, 80, 60, 40] },
@@ -16,27 +29,14 @@ const chartViews = {
     },
     type: 'bar',
   },
-  'Level-wise': {
+  'City-wise': {
     series: [
-      { name: 'Courses', data: [60, 90, 50] },
+      { name: 'Trades', data: [90, 75, 60, 45, 30] },
     ],
     options: {
       chart: { type: 'bar', toolbar: { show: false } },
-      xaxis: { categories: ['Beginner', 'Intermediate', 'Advanced'] },
-      colors: ['#11c46e'],
-      plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
-      dataLabels: { enabled: true },
-    },
-    type: 'bar',
-  },
-  'Top Trades': {
-    series: [
-      { name: 'Enrollments', data: [90, 80, 70, 60, 50] },
-    ],
-    options: {
-      chart: { type: 'bar', toolbar: { show: false } },
-      xaxis: { categories: ['Electrician', 'Welder', 'Plumber', 'Mechanic', 'Carpenter'] },
-      colors: ['#f1b44c'],
+      xaxis: { categories: ['Karachi', 'Lahore', 'Islamabad', 'Peshawar', 'Quetta'] },
+      colors: ['#34c38f'],
       plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
       dataLabels: { enabled: true },
     },
@@ -45,9 +45,9 @@ const chartViews = {
 };
 
 const ProgramsTradesChart = ({ cardClassName = '' }) => {
-  const [activeTab, setActiveTab] = useState('Sector-wise');
+  const [activeTab, setActiveTab] = useState('Top Trades');
 
-  const chartData = chartViews[activeTab];
+  const chartData = chartViews[activeTab] || chartViews['Sector-wise'];
 
   return (
     <React.Fragment>
@@ -86,4 +86,4 @@ const ProgramsTradesChart = ({ cardClassName = '' }) => {
   );
 };
 
-export default ProgramsTradesChart; 
+export default ProgramsTradesChart;

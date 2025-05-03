@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import RadialChart from "./RadialChart";
 import { Card, CardBody, Col, Row } from "reactstrap";
 import { SocialSourceData } from "../../CommonData/Data/index";
-import BarChart from "../AllCharts/apex/barchart";
 import DonutChart from "../AllCharts/apex/dountchart";
 
 const SectorsAnalytics = () => {

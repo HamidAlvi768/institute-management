@@ -8,31 +8,64 @@ const RadialChart1 = () => {
             type: 'radialBar',
             sparkline: {
                 enabled: true
+            },
+            animations: {
+                enabled: true,
+                easing: 'easeinout',
+                speed: 800,
+                animateGradually: {
+                    enabled: true,
+                    delay: 150
+                },
+                dynamicAnimation: {
+                    enabled: true,
+                    speed: 350
+                }
             }
         },
         dataLabels: {
             enabled: false
         },
-        colors: ['#0ab39c'],
+        colors: ['#3d8ef8'], // Blue for NAVTTC Registered
         stroke: {
-            lineCap: 'round'
+            lineCap: 'round',
+            dashArray: 0
         },
         plotOptions: {
             radialBar: {
                 hollow: {
                     margin: 0,
-                    size: '70%'
+                    size: '70%',
+                    background: '#f8f9fa',
+                    dropShadow: {
+                        enabled: true,
+                        top: 0,
+                        left: 0,
+                        blur: 3,
+                        opacity: 0.1
+                    }
                 },
                 track: {
                     margin: 0,
+                    background: '#e9ecef',
+                    strokeWidth: '97%',
+                    dropShadow: {
+                        enabled: true,
+                        top: 0,
+                        left: 0,
+                        blur: 3,
+                        opacity: 0.1
+                    }
                 },
-    
                 dataLabels: {
                     name: {
                         show: false
                     },
                     value: {
                         offsetY: 5,
+                        fontSize: '14px',
+                        fontWeight: '600',
+                        color: '#3d8ef8',
                         show: true
                     }
                 }
@@ -47,7 +80,7 @@ const RadialChart1 = () => {
           type="radialBar"
           height="72"
           width= "72"
-
+          className="apex-charts"
         />
       </React.Fragment>
   )

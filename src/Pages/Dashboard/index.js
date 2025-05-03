@@ -18,6 +18,8 @@ import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 
 const Dashboard = () => {
   document.title = "Dashboard | Navttc - React Admin & Dashboard Template";
+
+
   return (
     <React.Fragment>
       <div className="page-content">
@@ -38,14 +40,17 @@ const Dashboard = () => {
             <EnrollmentAnalyticsChart />
             <ProgramsTradesChart />
           </Row>
+
           <Row>
             <CombinedProgramsChart />
             <CertificationTrainersChart />
             <EmploymentOutcomesChart />
           </Row>
+          
           <Row>
             <EnrollmentPassoutChart />
           </Row>
+
         </Container>
       </div>
     </React.Fragment>

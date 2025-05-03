@@ -17,7 +17,7 @@ const OverView = () => {
 
     return (
         <React.Fragment>
-            <Col xl={4}>
+            <Col xl={4} sm={4}>
                 <Card>
                     <CardBody>
                         <div className="d-flex justify-between align-items-center">

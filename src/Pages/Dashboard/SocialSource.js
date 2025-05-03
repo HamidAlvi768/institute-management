@@ -30,7 +30,7 @@ const SocialSource = () => {
 
   return (
     <React.Fragment>
-      <Col xl={4}>
+      <Col xl={4} sm={8}>
         <Card>
           <CardBody>
             <div className="d-flex align-items-center">

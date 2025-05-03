@@ -1,7 +1,6 @@
 /* global Highcharts topojson turf */
 import React, { useState, useEffect, useRef } from 'react';
 
-
 const provinceData = [
     {
         'hc-key': 'pk-pb',
@@ -65,10 +64,15 @@ function MapPakistan() {
         description: 'Click on a province to see more information. Use the navigation controls to zoom and pan the map.',
     });
 
+    // Custom function to handle province click
+    const handleProvinceClick = (province) => {
+        console.log(`Province clicked: ${province.name}`);
+    };
+
     useEffect(() => {
         const initializeMap = async () => {
             try {
-                // Check if required global dependencies are available
+                // Check dependencies
                 if (!window.Highcharts) {
                     throw new Error('Highcharts is not defined. Ensure the Highcharts scripts are included in index.html.');
                 }
@@ -156,6 +160,7 @@ function MapPakistan() {
                                             title: this.name,
                                             description: this.description,
                                         });
+                                        handleProvinceClick(this);
                                     },
                                 },
                             },
@@ -170,6 +175,7 @@ function MapPakistan() {
                                             title: this.name,
                                             description: this.description,
                                         });
+                                        handleProvinceClick(this);
                                     },
                                 },
                             },
@@ -219,12 +225,10 @@ function MapPakistan() {
     }, []);
 
     return (
-
         <div
             ref={mapContainer}
             className="w-full max-w-4xl h-[400px] max-w-[380px]"
         ></div>
-
     );
 }
 

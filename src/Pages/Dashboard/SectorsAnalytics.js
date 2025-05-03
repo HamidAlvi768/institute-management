@@ -61,7 +61,7 @@ const SectorsAnalytics = () => {
 
   return (
     <React.Fragment>
-       <Col xl={12}>
+      <Col xl={8}>
         <Card>
           <CardBody>
             <div className="d-flex align-items-center">
@@ -69,7 +69,7 @@ const SectorsAnalytics = () => {
                 <h5 className="card-title">Sectors by Provinces</h5>
               </div>
               <div className="flex-shrink-0">
-                <select 
+                <select
                   className="form-select form-select-sm mb-0 my-n1"
                   onChange={handleYearChange}
                   value={selectedYear}

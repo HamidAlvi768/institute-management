@@ -10,7 +10,7 @@ const chartData = {
   options: {
     chart: { type: 'line', toolbar: { show: false } },
     xaxis: { categories: ['2019', '2020', '2021', '2022', '2023'] },
-    colors: ['#3d8ef8', '#11c46e'],
+    colors: ['#1b5642', '#a9cd98', '#f1b44c'],
     dataLabels: { enabled: true },
     stroke: { curve: 'smooth', width: 3 },
     legend: { show: true, position: 'bottom' },

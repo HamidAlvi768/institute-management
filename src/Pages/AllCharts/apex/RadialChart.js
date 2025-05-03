@@ -27,7 +27,7 @@ const RadialChartData = {
     },
 
     labels: ["Computer", "Tablet", "Laptop", "Mobile"],
-    colors: ["#556ee6", "#34c38f", "#f46a6a", "#f1b44c"],
+    colors: ['#1b5642', '#a9cd98', '#f1b44c', '#ef4444'],
   },
 }
 

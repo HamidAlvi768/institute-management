@@ -94,8 +94,19 @@ const NavTab = () => {
                         <CertificationTrainersChart />
                         <EmploymentOutcomesChart />
                         <SectorsAnalytics />
+
+                        {/*  */}
+                        <EnrollmentAnalyticsChart />
+                        <ProgramsTradesChart /> 
                         <CombinedProgramsChart />
-                        
+
+                        <CertificationTrainersChart />
+                        <ProgramsPieChart />
+                        <EnrollmentPassoutChart />
+
+                        <EmploymentOutcomesChart />
+                        <SectorsAnalytics />
+                        <AffiliationBodiesChart />
                     </Row>
                 </TabPane>
                 <TabPane tabId="2">

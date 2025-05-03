@@ -75,7 +75,7 @@ const ProgramsTradesChart = ({ cardClassName = '' }) => {
                 options={chartData.options}
                 series={chartData.series}
                 type={chartData.type}
-                height={320}
+                height={340}
                 className="apex-charts"
               />
             </div>

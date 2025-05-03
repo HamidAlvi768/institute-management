@@ -5,7 +5,7 @@ import { SocialSourceData } from "../../CommonData/Data/index";
 import BarChart from "../AllCharts/apex/barchart";
 import DonutChart from "../AllCharts/apex/dountchart";
 
-const SocialSource = () => {
+const SectorsAnalytics = () => {
 
   const years = {
     'all': [550, 475, 450, 430, 380],
@@ -30,15 +30,15 @@ const SocialSource = () => {
 
   return (
     <React.Fragment>
-      <Col xl={4} sm={8}>
+       <Col xl={4}>
         <Card>
           <CardBody>
             <div className="d-flex align-items-center">
               <div className="flex-grow-1">
-                <h5 className="card-title">Institute Analysis</h5>
+                <h5 className="card-title">Sectors</h5>
               </div>
               <div className="flex-shrink-0">
-                <select className="form-select form-select-sm mb-0 my-n1" onInput={handleYearChange}>
+                <select className="form-select form-select-sm mb-0 my-n1">
                   <option value="all">All</option>
                   {["2025", "2024", "2023", "2022", "2021", "2020"].map((item, key) => (
                     <option key={key} value={item}>
@@ -49,7 +49,7 @@ const SocialSource = () => {
               </div>
             </div>
 
-            <BarChart datacount={chartData} />
+            <DonutChart />
 
           </CardBody>
         </Card>
@@ -59,4 +59,4 @@ const SocialSource = () => {
   );
 };
 
-export default SocialSource;
+export default SectorsAnalytics;

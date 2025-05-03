@@ -32,7 +32,7 @@ const EnrollmentPassoutChart = ({ cardClassName = '' }) => {
                 options={chartData.options}
                 series={chartData.series}
                 type={chartData.type}
-                height={320}
+                height={395}
                 className="apex-charts"
               />
             </div>

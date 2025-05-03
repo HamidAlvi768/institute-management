@@ -100,7 +100,7 @@ const LineColumnArea = () => {
           options={LineColumnAreaData.options}
           series={LineColumnAreaData.series}
           type="line"
-          height="350"
+          height="400"
           className="apex-charts"
         />
       </React.Fragment>

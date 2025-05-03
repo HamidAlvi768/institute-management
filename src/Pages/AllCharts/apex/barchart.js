@@ -22,8 +22,8 @@ const barchart = ({datacount}) => {
       dataLabels: {
         enabled: true,
       },
-
       colors: ["#a9cd98"],
+      textColor: "white",
       grid: {
         borderColor: "#f1f1f1",
       },

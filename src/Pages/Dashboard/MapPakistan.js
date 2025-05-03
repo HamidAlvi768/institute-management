@@ -35,21 +35,22 @@ const provinceData = [
     },
     {
         'hc-key': 'pk-is',
-        name: 'Islamabad Capital Territory',
+        name: 'ICT',
         value: 5,
         description: "Federal capital territory containing Pakistan's capital city.",
-        color: '#a9cd98',
+        color: '#1b5642',
+        textColor: 'black',
     },
     {
         'hc-key': 'pk-jk',
-        name: 'Azad Kashmir',
+        name: '',
         value: 6,
         description: 'Self-governing territory administered by Pakistan.',
         color: '#a9cd98',
     },
     {
         'hc-key': 'pk-na',
-        name: 'Gilgit-Baltistan',
+        name: 'GB',
         value: 7,
         description: 'Northern administrative territory known for its mountainous terrain.',
         color: '#a9cd98',
@@ -221,7 +222,7 @@ function MapPakistan() {
 
         <div
             ref={mapContainer}
-            className="w-full max-w-4xl h-[600px] min-w-[310px]"
+            className="w-full max-w-4xl h-[400px] max-w-[380px]"
         ></div>
 
     );

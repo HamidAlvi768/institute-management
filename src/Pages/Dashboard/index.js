@@ -9,9 +9,6 @@ import LatestTransation from "./LatestTransation";
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 
-//Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb";
-
 const Dashboard = () => {
   document.title = "Dashboard | Navttc - React Admin & Dashboard Template";
   return (

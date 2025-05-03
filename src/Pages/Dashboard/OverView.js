@@ -13,38 +13,31 @@ import MapPakistan from './MapPakistan';
 
 
 const OverView = () => {
+    const [selectedRegion, setSelectedRegion] = React.useState('ALL');
+
     return (
         <React.Fragment>
-            <Col xl={8}>
+            <Col xl={4}>
                 <Card>
                     <CardBody>
-                        <div className="d-flex align-items-center">
+                        <div className="d-flex justify-between align-items-center">
                             <div className="flex-grow-1">
-                                <h5 className="card-title">Overview</h5>
+                                <h5 className="card-title">Map</h5>
                             </div>
                             <div className="flex-shrink-0">
-                                <div>
-                                    <button type="button" className="btn btn-soft-secondary btn-sm me-1">
-                                        ALL
-                                    </button>
-                                    <button type="button" className="btn btn-soft-primary btn-sm me-1">
-                                        Punjab
-                                    </button>
-                                    <button type="button" className="btn btn-soft-secondary btn-sm me-1">
-                                        Sindh
-                                    </button>
-                                    <button type="button" className="btn btn-soft-secondary btn-sm me-1 active">
-                                        Balochistan
-                                    </button>
-                                    <button type="button" className="btn btn-soft-secondary btn-sm me-1 active">
-                                        KPK
-                                    </button>
-
-                                    <button type="button" className="btn btn-soft-secondary btn-sm me-1 active">
-                                        Islamabad
-                                    </button>
-                                </div>
-                            </div>
+                                <select
+                                    className="form-select form-select-sm"
+                                    value={selectedRegion}
+                                    onChange={(e) => setSelectedRegion(e.target.value)}
+                                >
+                                    <option value="ALL">ALL</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Sindh">Sindh</option>
+                                    <option value="Balochistan">Balochistan</option>
+                                    <option value="KPK">KPK</option>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Gilgit Biltistan">Gilgit Biltistan</option>
+                                </select></div>
                         </div>
                         <div>
                             <MapPakistan />

@@ -4,7 +4,7 @@ import ReactApexChart from "react-apexcharts"
 const barchartData = {
   series: [
     {
-      data: [380, 430, 450, 475, 550, 584, 780, 1100, 1220, 1365],
+      data: [380, 430, 450, 475, 550],
     },
   ],
   options: {
@@ -28,16 +28,11 @@ const barchartData = {
     },
     xaxis: {
       categories: [
-        "South Korea",
-        "Canada",
-        "United Kingdom",
-        "Netherlands",
-        "Italy",
-        "France",
-        "Japan",
-        "United States",
-        "China",
-        "Germany",
+        "Punjab",
+        "Sindh",
+        "Balochistan",
+        "KPK",
+        "Gilgit Biltistan"
       ],
     },
   },
@@ -50,7 +45,7 @@ const barchart = () => {
           options={barchartData.options}
           series={barchartData.series}
           type="bar"
-          height="350"
+          height="400"
           className="apex-charts"
         />
       </React.Fragment>

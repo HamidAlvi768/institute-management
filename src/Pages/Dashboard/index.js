@@ -40,19 +40,18 @@ const Dashboard = () => {
 
           {/* New Dashboard Charts: 3 in one row */}
           <Row>
-            <SectorsAnalytics />
             <EnrollmentAnalyticsChart />
             <ProgramsTradesChart />
+            <CombinedProgramsChart />
           </Row>
 
           <Row>
-            <CombinedProgramsChart />
             <CertificationTrainersChart />
             <EmploymentOutcomesChart />
+            <SectorsAnalytics />
           </Row>
           
           <Row>
-            <SectorsAnalytics />
             <EnrollmentPassoutChart />
             <ProgramsPieChart />
           </Row>

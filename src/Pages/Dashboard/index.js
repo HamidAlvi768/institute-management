@@ -1,7 +1,5 @@
 import React from "react";
 import UserPanel from "./UserPanel";
-import OrderStatus from "./OrderStatus";
-import Notifications from "./Notifications";
 import SocialSource from "./SocialSource";
 import OverView from "./OverView";
 import RevenueByLocation from "./RevenueByLocation";

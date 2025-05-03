@@ -10,7 +10,7 @@ const AffiliationBodyChart = () => {
     },
     plotOptions: {
       bar: {
-        horizontal: true,
+        horizontal: false,
         barHeight: '60%',
         distributed: false,
       },
@@ -60,7 +60,7 @@ const AffiliationBodyChart = () => {
       },
     },
   };
-  
+
   const series = [
     {
       name: "NAVTTC",
@@ -71,7 +71,7 @@ const AffiliationBodyChart = () => {
       data: [36, 0, 0, 0],
     },
     {
-      name: "SBTE", 
+      name: "SBTE",
       data: [0, 29, 0, 0],
     },
     {
@@ -94,7 +94,7 @@ const AffiliationBodyChart = () => {
         options={options}
         series={series}
         type="bar"
-        height="380"
+        height="400"
         className="apex-charts"
       />
     </React.Fragment>

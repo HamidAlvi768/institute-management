@@ -37,7 +37,7 @@ const NavTab = () => {
                         className={classnames({ active: activeTab === '1' })}
                         onClick={() => toggleTab('1')}
                     >
-                        All
+                        All (Institute)
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -45,7 +45,7 @@ const NavTab = () => {
                         className={classnames({ active: activeTab === '2' })}
                         onClick={() => toggleTab('2')}
                     >
-                        Institute
+                        Trades
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -53,7 +53,7 @@ const NavTab = () => {
                         className={classnames({ active: activeTab === '3' })}
                         onClick={() => toggleTab('3')}
                     >
-                        Courses
+                        Secters
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -85,17 +85,15 @@ const NavTab = () => {
             <TabContent activeTab={activeTab}>
                 <TabPane tabId="1">
                     <Row>
-                        <EnrollmentPassoutChart />
                         <ProgramsPieChart />
-
-                        <EnrollmentAnalyticsChart />
                         <ProgramsTradesChart />
                         <CombinedProgramsChart />
+                        <EnrollmentPassoutChart />
+                        <EnrollmentAnalyticsChart />
                         <CertificationTrainersChart />
                         <EmploymentOutcomesChart />
                         <SectorsAnalytics />
-                        <CombinedProgramsChart />
-                        
+                        <AffiliationBodiesChart />
                     </Row>
                 </TabPane>
                 <TabPane tabId="2">
@@ -111,7 +109,6 @@ const NavTab = () => {
                         <ProgramsTradesChart />
                         <CombinedProgramsChart />
                     </Row>
-
                 </TabPane>
                 <TabPane tabId="4">
                     <Row>

@@ -6,6 +6,17 @@ import RadialChart2 from "./userpanelChart2";
 import RadialChart3 from "./userpanelChart3";
 
 const UserPanel = () => {
+
+  const institutes = {
+    'total': 700,
+    'registerd': 550,
+    'not-registerd': 200,
+    'affiliates': 5,
+    'acreditation': 30,
+    'board-registerd': 300
+  }
+
+
   return (
     <React.Fragment>
       <Row>
@@ -22,7 +33,7 @@ const UserPanel = () => {
                 </div>
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Institutes</p>
-                  <h5 className="mb-3 st-card-num">300</h5>
+                  <h5 className="mb-3 st-card-num">{institutes['total']}</h5>
                 </div>
               </div>
             </CardBody>

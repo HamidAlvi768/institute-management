@@ -167,6 +167,17 @@ const Header = (props) => {
               </div>
             </div> */}
 
+            <div className="flex align-items-center">
+              <label className="" style={{'margin-right':'5px'}}>Year:</label>
+              <select className="form-select form-select-sm mb-0 my-n1">
+                {["2025", "2024", "2023", "2022", "2021", "2020"].map((item, key) => (
+                  <option key={key} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </div>
+
             <div className="dropdown d-none d-lg-inline-block ms-1">
               <button
                 type="button"

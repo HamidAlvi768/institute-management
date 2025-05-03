@@ -22,14 +22,27 @@ const chartViews = {
   'Accreditation': {
     series: [
       { name: 'National', data: [50, 40, 30, 20, 10] },
-      { name: 'International', data: [10, 20, 10, 10, 5] },
+      { name: 'International', data: [10, 20, 10, 10, 5] }
+    ],
+    options: {
+      chart: { type: 'bar', stacked: true, toolbar: { show: false } },
+      xaxis: { categories: ['Punjab', 'Sindh', 'KPK', 'Balochistan', 'Islamabad'] },
+      colors: ['#11c46e', '#f1b44c'],
+      plotOptions: { bar: { horizontal: false, columnWidth: '45%' } },
+      dataLabels: { enabled: false },
+      legend: { show: true, position: 'bottom' },
+    },
+    type: 'bar',
+  },
+  'Ownership': {
+    series: [
       { name: 'Govt', data: [30, 20, 25, 15, 10] },
       { name: 'Private', data: [10, 20, 35, 55, 75] },
     ],
     options: {
       chart: { type: 'bar', stacked: true, toolbar: { show: false } },
       xaxis: { categories: ['Punjab', 'Sindh', 'KPK', 'Balochistan', 'Islamabad'] },
-      colors: ['#11c46e', '#f1b44c', '#3d8ef8', '#f46a6a'],
+      colors: ['#3d8ef8', '#f46a6a'],
       plotOptions: { bar: { horizontal: false, columnWidth: '45%' } },
       dataLabels: { enabled: false },
       legend: { show: true, position: 'bottom' },
@@ -99,4 +112,4 @@ const InstituteMetricsChart = ({ cardClassName = '' }) => {
   );
 };
 
-export default InstituteMetricsChart; 
+export default InstituteMetricsChart;

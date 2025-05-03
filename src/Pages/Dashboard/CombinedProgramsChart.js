@@ -14,7 +14,7 @@ const chartData = {
       plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
       dataLabels: { enabled: true },
       title: {
-        text: 'CBT Levels',
+        text: 'CBT',
         align: 'left',
         style: { fontSize: '14px', fontWeight: 600 }
       }
@@ -32,7 +32,7 @@ const chartData = {
       plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
       dataLabels: { enabled: true },
       title: {
-        text: 'Conventional Duration',
+        text: 'Conventional',
         align: 'left',
         style: { fontSize: '14px', fontWeight: 600 }
       }

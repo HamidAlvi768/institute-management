@@ -113,8 +113,8 @@ const NavTab = () => {
                 <TabPane tabId="4">
                     <Row>
                         <CertificationTrainersChart />
-                        <EmploymentOutcomesChart />
-                        <SectorsAnalytics />
+                        <ProgramsPieChart />
+                        <EnrollmentPassoutChart />
                     </Row>
                 </TabPane>
             </TabContent>

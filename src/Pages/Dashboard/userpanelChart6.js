@@ -1,9 +1,8 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
-
-const RadialChart2 = () => {
-    const series = [45];
+const RadialChart6 = () => {
+    const series = [15];
     const radialoptions = {
         chart: {
             type: 'radialBar',
@@ -27,7 +26,7 @@ const RadialChart2 = () => {
         dataLabels: {
             enabled: false
         },
-        colors: ['#f1b44c'], // Yellow/Gold for Board Registered
+        colors: ['#02a499'], // Green for Affiliates
         stroke: {
             lineCap: 'round',
             dashArray: 0
@@ -66,7 +65,7 @@ const RadialChart2 = () => {
                         offsetY: 5,
                         fontSize: '14px',
                         fontWeight: '600',
-                        color: '#f1b44c',
+                        color: '#02a499',
                         show: true
                     }
                 }
@@ -87,4 +86,4 @@ const RadialChart2 = () => {
   )
 }
 
-export default RadialChart2;
+export default RadialChart6;

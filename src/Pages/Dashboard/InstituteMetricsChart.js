@@ -12,7 +12,7 @@ const chartViews = {
     options: {
       chart: { type: 'bar', stacked: true, toolbar: { show: false } },
       xaxis: { categories: ['Punjab', 'Sindh', 'KPK', 'Balochistan', 'Islamabad'] },
-      colors: ['#3d8ef8', '#f46a6a'],
+      colors: ['#1b5642', '#a9cd98'],
       plotOptions: { bar: { horizontal: false, columnWidth: '45%' } },
       dataLabels: { enabled: true },
       legend: { show: true, position: 'bottom' },

@@ -18,6 +18,7 @@ import ProgramsPieChart from './ProgramsPieChart';
 
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
+import CourseChart from "../AllCharts/apex/coursechart";
 
 const Dashboard = () => {
   document.title = "Dashboard | Navttc - React Admin & Dashboard Template";

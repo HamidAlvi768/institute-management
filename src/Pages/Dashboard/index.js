@@ -1,5 +1,5 @@
 import React from "react";
-import UsePanel from "./UserPanel";
+import UserPanel from "./UserPanel";
 import OrderStatus from "./OrderStatus";
 import Notifications from "./Notifications";
 import SocialSource from "./SocialSource";
@@ -19,6 +19,7 @@ import ProgramsPieChart from './ProgramsPieChart';
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 import CourseChart from "../AllCharts/apex/coursechart";
+import NavTab from "./NavTab";
 
 const Dashboard = () => {
   document.title = "Dashboard | Navttc - React Admin & Dashboard Template";
@@ -29,7 +30,7 @@ const Dashboard = () => {
       <div className="page-content">
         <Container fluid={true}>
           {/* User Panel Charts */}
-          <UsePanel />
+          <UserPanel />
 
           <Row>
             {/* Overview Chart */}
@@ -38,24 +39,8 @@ const Dashboard = () => {
             <SocialSource />
             <InstituteMetricsChart />
           </Row>
-
-          {/* New Dashboard Charts: 3 in one row */}
-          <Row>
-            <EnrollmentAnalyticsChart />
-            <ProgramsTradesChart />
-            <CombinedProgramsChart />
-          </Row>
-
-          <Row>
-            <CertificationTrainersChart />
-            <EmploymentOutcomesChart />
-            <SectorsAnalytics />
-          </Row>
           
-          <Row>
-            <EnrollmentPassoutChart />
-            <ProgramsPieChart />
-          </Row>
+          <NavTab />
 
         </Container>
       </div>

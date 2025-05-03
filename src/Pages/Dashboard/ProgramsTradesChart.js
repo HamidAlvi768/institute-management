@@ -10,7 +10,7 @@ const chartViews = {
     options: {
       chart: { type: 'bar', toolbar: { show: false } },
       xaxis: { categories: ['Web Development', 'Nursing', 'Auto Mechanics', 'Fashion Design', 'Electrical'] },
-      colors: ['#f1b44c'],
+      colors: ['#1b5642', '#a9cd98'],
       plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
       dataLabels: { enabled: true },
     },
@@ -23,7 +23,7 @@ const chartViews = {
     options: {
       chart: { type: 'bar', toolbar: { show: false } },
       xaxis: { categories: ['IT', 'Healthcare', 'Construction', 'Textile', 'Automotive'] },
-      colors: ['#3d8ef8'],
+      colors: ['#1b5642', '#a9cd98'],
       plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
       dataLabels: { enabled: true },
     },
@@ -36,7 +36,7 @@ const chartViews = {
     options: {
       chart: { type: 'bar', toolbar: { show: false } },
       xaxis: { categories: ['Karachi', 'Lahore', 'Islamabad', 'Peshawar', 'Quetta'] },
-      colors: ['#34c38f'],
+      colors: ['#1b5642', '#a9cd98'],
       plotOptions: { bar: { horizontal: true, barHeight: '60%' } },
       dataLabels: { enabled: true },
     },
@@ -77,7 +77,7 @@ const ProgramsTradesChart = ({ cardClassName = '' }) => {
                 type={chartData.type}
                 height={350}
                 className="apex-charts"
-                
+
               />
             </div>
           </CardBody>

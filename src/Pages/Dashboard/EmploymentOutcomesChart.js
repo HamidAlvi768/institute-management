@@ -7,7 +7,7 @@ const chartViews = {
     series: [60, 20, 10, 10],
     options: {
       labels: ['Employed', 'Unemployed', 'Overseas', 'Self-Employed'],
-      colors: ['#11c46e', '#f46a6a', '#3d8ef8', '#f1b44c'],
+      colors: ['#1b5642', '#a9cd98', '#4b8c6f', '#7ab391'],
       legend: { show: true, position: 'bottom' },
       dataLabels: { enabled: true },
     },

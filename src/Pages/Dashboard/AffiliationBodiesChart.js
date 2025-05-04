@@ -5,7 +5,7 @@ import AffiliationBodyChart from "../AllCharts/apex/AffiliationBodyChart";
 const AffiliationBodiesChart = () => {
   return (
     <React.Fragment>
-      <Col xl={12}>
+      <Col xl={6}>
         <Card>
           <CardBody>
             <CardTitle className="mb-4">

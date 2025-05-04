@@ -26,7 +26,7 @@ const RadialChart6 = () => {
         dataLabels: {
             enabled: false
         },
-        colors: ['#02a499'], // Green for Affiliates
+        colors: ['#1b5642', '#a9cd98', '#f1b44c'],
         stroke: {
             lineCap: 'round',
             dashArray: 0

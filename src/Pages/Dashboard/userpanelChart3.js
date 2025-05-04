@@ -26,7 +26,7 @@ const RadialChart3 = () => {
         dataLabels: {
             enabled: false
         },
-        colors: ['#10b981'], // Green for Accreditation
+        colors: ['#1b5642', '#a9cd98', '#f1b44c'],
         stroke: {
             lineCap: 'round',
             dashArray: 0

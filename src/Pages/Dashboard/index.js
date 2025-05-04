@@ -34,7 +34,7 @@ const Dashboard = () => {
           <Row>
             {/* Overview Chart */}
             <OverView />
-            {/* Social Source Chart */}
+            {/* Socil Source Chart */}
             <SocialSource />
             <InstituteMetricsChart />
           </Row>

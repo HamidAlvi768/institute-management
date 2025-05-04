@@ -57,6 +57,7 @@ const provinceData = [
 ];
 
 function MapPakistan() {
+    const [provincesData, setProvincesData] = useState(provinceData);
     const mapContainer = useRef(null);
     const chartRef = useRef(null);
     const [infoContent, setInfoContent] = useState({
@@ -64,26 +65,34 @@ function MapPakistan() {
         description: 'Click on a province to see more information. Use the navigation controls to zoom and pan the map.',
     });
 
-    // Custom function to handle province click
+    // Handle province click to show only the clicked province
     const handleProvinceClick = (province) => {
+        const selectedProvince = provinceData.map((p) => {
+            if (p.name === province.name) {
+                p.color = "#1b5642";
+            }
+            else {
+                p.color = '#a9cd98';
+            }
+            return p;
+        });
+        if (selectedProvince) {
+            setProvincesData(selectedProvince); // Update state with only the clicked province
+            // Update the map's series data directly
+            if (chartRef.current) {
+                chartRef.current.series[0].setData(selectedProvince);
+            }
+        }
         console.log(`Province clicked: ${province.name}`);
     };
 
     useEffect(() => {
         const initializeMap = async () => {
             try {
-                // Check dependencies
-                if (!window.Highcharts) {
-                    throw new Error('Highcharts is not defined. Ensure the Highcharts scripts are included in index.html.');
-                }
-                if (!window.topojson) {
-                    throw new Error('topojson is not defined. Ensure the topojson-client script is included in index.html.');
-                }
-                if (!window.turf) {
-                    throw new Error('turf is not defined. Ensure the @turf/turf script is included in index.html.');
+                if (!window.Highcharts || !window.topojson || !window.turf) {
+                    throw new Error('Required libraries (Highcharts, topojson, turf) are not defined.');
                 }
 
-                // Fetch and process map data
                 const response = await fetch(
                     'https://code.highcharts.com/mapdata/countries/pk/pk-all.topo.json'
                 );
@@ -114,22 +123,13 @@ function MapPakistan() {
                         borderColor: 'transparent',
                         borderRadius: 0,
                     },
-                    title: {
-                        text: '',
-                        style: { fontSize: '0px', fontWeight: 'bold' },
-                    },
-                    subtitle: {
-                        text: '',
-                        style: { fontSize: '0px' },
-                    },
+                    title: { text: '', style: { fontSize: '0px' } },
+                    subtitle: { text: '', style: { fontSize: '0px' } },
                     mapNavigation: {
                         enabled: false,
-                        buttonOptions: {
-                            verticalAlign: 'bottom',
-                            style: { color: '#333' },
-                        },
+                        buttonOptions: { verticalAlign: 'bottom', style: { color: '#333' } },
                     },
-                    legend: { enabled: false, title: { text: 'Provinces' } },
+                    legend: { enabled: false },
                     colorAxis: { visible: false },
                     tooltip: {
                         headerFormat: '',
@@ -137,13 +137,11 @@ function MapPakistan() {
                     },
                     series: [
                         {
-                            data: provinceData,
+                            data: provincesData,
                             keys: ['hc-key', 'value'],
                             joinBy: 'hc-key',
                             name: 'Pakistan Provinces',
-                            states: {
-                                hover: { brightness: 0.1, borderColor: '#333' },
-                            },
+                            states: { hover: { brightness: 0.1, borderColor: '#333' } },
                             dataLabels: {
                                 enabled: true,
                                 format: '{point.name}',
@@ -167,19 +165,6 @@ function MapPakistan() {
                         },
                     ],
                     plotOptions: {
-                        series: {
-                            point: {
-                                events: {
-                                    click: function () {
-                                        setInfoContent({
-                                            title: this.name,
-                                            description: this.description,
-                                        });
-                                        handleProvinceClick(this);
-                                    },
-                                },
-                            },
-                        },
                         map: {
                             allAreas: true,
                             colorByPoint: true,
@@ -215,14 +200,13 @@ function MapPakistan() {
 
         initializeMap();
 
-        // Cleanup chart on component unmount
         return () => {
             if (chartRef.current) {
                 chartRef.current.destroy();
                 chartRef.current = null;
             }
         };
-    }, []);
+    }, []); // Empty dependency array since we handle data updates manually
 
     return (
         <div

@@ -7,7 +7,7 @@ const chartViews = {
     series: [65, 35],
     options: {
       labels: ['National', 'International'],
-      colors: ['#3d8ef8', '#f1b44c'],
+      colors: ['#1b5642', '#a9cd98', '#f1b44c'],
       legend: { show: true, position: 'bottom' },
       dataLabels: { enabled: true },
     },

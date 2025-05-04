@@ -26,7 +26,7 @@ const RadialChart4 = () => {
         dataLabels: {
             enabled: false
         },
-        colors: ['#6d6af6'], // Purple for Institutes
+        colors: ['#1b5642', '#a9cd98', '#f1b44c'],
         stroke: {
             lineCap: 'round',
             dashArray: 0

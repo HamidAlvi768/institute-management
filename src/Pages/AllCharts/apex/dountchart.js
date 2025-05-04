@@ -5,7 +5,7 @@ const dountchartData = {
   series: [25.6, 32.0, 23.8, 9.9],
   options: {
     labels: ["IT", "Healthcare", "Finance", "Manufacturing"],
-    colors: ["rgb(61, 142, 248)", "rgb(17, 196, 110)", "#f1b44c", "#f46a6a"],
+    colors: ['#1b5642', '#a9cd98', '#4b8c6f', '#7ab391'],
     legend: {
       show: true,
       position: "bottom",

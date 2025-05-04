@@ -1,7 +1,7 @@
-import React from "react"
-import ReactApexChart from "react-apexcharts"
+import React from "react";
+import ReactApexChart from "react-apexcharts";
 
-const barchart = ({datacount}) => {
+const barchart = ({ datacount }) => {
   const barchartData = {
     series: [
       {
@@ -21,9 +21,12 @@ const barchart = ({datacount}) => {
       },
       dataLabels: {
         enabled: true,
+        enabled: true,
+        style: {
+          colors: ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF'], // Different colors for each bar
+        },
       },
-      colors: ["#a9cd98"],
-      textColor: "white",
+      colors: ['#1b5642', '#a9cd98', '#f1b44c'],
       grid: {
         borderColor: "#f1f1f1",
       },
@@ -33,11 +36,23 @@ const barchart = ({datacount}) => {
           "Sindh",
           "Balochistan",
           "KPK",
-          "Gilgit Biltistan"
+          "Gilgit Biltistan",
         ],
+        labels: {
+          style: {
+            colors: '#000000', // Text color for x-axis labels
+          },
+        },
+      },
+      yaxis: {
+        labels: {
+          style: {
+            colors: '#000000', // Text color for y-axis labels
+          },
+        },
       },
     },
-  }
+  };
 
   return (
     <React.Fragment>
@@ -49,7 +64,7 @@ const barchart = ({datacount}) => {
         className="apex-charts"
       />
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default barchart;

@@ -44,7 +44,7 @@ const chartData = {
 const CombinedProgramsChart = ({ cardClassName = '' }) => {
   return (
     <React.Fragment>
-      <Col xl={4}>
+      <Col xl={8}>
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">

@@ -27,7 +27,7 @@ const RadialChart2 = () => {
         dataLabels: {
             enabled: false
         },
-        colors: ['#f1b44c'], // Yellow/Gold for Board Registered
+        colors: ['#a9cd98'],
         stroke: {
             lineCap: 'round',
             dashArray: 0

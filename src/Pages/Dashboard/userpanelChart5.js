@@ -26,7 +26,7 @@ const RadialChart5 = () => {
         dataLabels: {
             enabled: false
         },
-        colors: ['#f46a6a'], // Red for Not Registered
+        colors: ['#1b5642', '#a9cd98', '#f1b44c'],
         stroke: {
             lineCap: 'round',
             dashArray: 0

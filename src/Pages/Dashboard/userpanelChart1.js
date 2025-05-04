@@ -26,7 +26,7 @@ const RadialChart1 = () => {
         dataLabels: {
             enabled: false
         },
-        colors: ['#3d8ef8'], // Blue for NAVTTC Registered
+        colors: ['#1b5642', '#a9cd98', '#f1b44c'],
         stroke: {
             lineCap: 'round',
             dashArray: 0

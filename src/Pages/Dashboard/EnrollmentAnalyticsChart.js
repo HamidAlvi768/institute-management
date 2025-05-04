@@ -51,7 +51,7 @@ const chartViews = {
       colors: ['#3d8ef8', '#f46a6a'],
       legend: { show: true, position: 'bottom' },
     },
-    type: 'pie',
+    type: 'donut',
   },
   'Board': {
     series: [70, 30],
@@ -64,7 +64,7 @@ const chartViews = {
   },
 };
 
-const EnrollmentAnalyticsChart = ({ cardClassName = '' }) => {
+const EnrollmentAnalyticsChart = ({ cardClassName = '', columnSize = 4 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedView, setSelectedView] = useState('Year-wise');
 
@@ -75,7 +75,7 @@ const EnrollmentAnalyticsChart = ({ cardClassName = '' }) => {
 
   return (
     <React.Fragment>
-      <Col xl={4}>
+      <Col xl={columnSize}>
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">
@@ -109,4 +109,4 @@ const EnrollmentAnalyticsChart = ({ cardClassName = '' }) => {
   );
 };
 
-export default EnrollmentAnalyticsChart; 
+export default EnrollmentAnalyticsChart;

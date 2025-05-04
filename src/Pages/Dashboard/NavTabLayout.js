@@ -17,11 +17,12 @@ import ProgramsTradesChart from "./ProgramsTradesChart";
 import EnrollmentPassoutChart from "./EnrollmentPassoutChart";
 import SectorsAnalytics from "./SectorsAnalytics";
 import ProgramsPieChart from './ProgramsPieChart';
-import AffiliationBodiesChart from './AffiliationBodiesChart';
+
 
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
+import AffiliationBodiesChart from './AffiliationBodiesChart';
 
-const NavTab = () => {
+const NavTabLayout = () => {
     const [activeTab, setActiveTab] = useState('1');
 
     const toggleTab = (tab) => {
@@ -52,7 +53,7 @@ const NavTab = () => {
                         className={classnames({ active: activeTab === '3' })}
                         onClick={() => toggleTab('3')}
                     >
-                        Sectors
+                        Secters
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -60,7 +61,7 @@ const NavTab = () => {
                         className={classnames({ active: activeTab === '4' })}
                         onClick={() => toggleTab('4')}
                     >
-                        Enrollment
+                        Batches
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -82,7 +83,6 @@ const NavTab = () => {
             </Nav>
 
             <TabContent activeTab={activeTab}>
-                {/* Tab 1: All Institute - Keeping the exact layout and ordering from NavTabLayout */}
                 <TabPane tabId="1">
                     <Row>
                         <ProgramsPieChart />
@@ -96,79 +96,30 @@ const NavTab = () => {
                         <AffiliationBodiesChart />
                     </Row>
                 </TabPane>
-                
-                {/* Tab 2: Trades */}
                 <TabPane tabId="2">
                     <Row>
-                        <Col xl={6}>
-                            <ProgramsTradesChart columnSize={12} />
-                        </Col>
-                        <Col xl={6}>
-                            <CombinedProgramsChart columnSize={12} />
-                        </Col>
+                        <EnrollmentPassoutChart />
+                        <ProgramsPieChart />
                     </Row>
                 </TabPane>
-                
-                {/* Tab 3: Sectors */}
                 <TabPane tabId="3">
+                    {/* New Dashboard Charts: 3 in one row */}
                     <Row>
-                        <Col xl={6}>
-                            <SectorsAnalytics columnSize={12} />
-                        </Col>
-                        <Col xl={6}>
-                            <Card>
-                                <CardBody>
-                                    <CardTitle className="mb-4">Programs by Sector</CardTitle>
-                                    <ProgramsTradesChart columnSize={12} />
-                                </CardBody>
-                            </Card>
-                        </Col>
+                        <EnrollmentAnalyticsChart />
+                        <ProgramsTradesChart />
+                        <CombinedProgramsChart />
                     </Row>
                 </TabPane>
-                
-                {/* Tab 4: Enrollment */}
                 <TabPane tabId="4">
                     <Row>
-                        <Col xl={6}>
-                            <EnrollmentAnalyticsChart columnSize={12} />
-                        </Col>
-                        <Col xl={6}>
-                            <EnrollmentPassoutChart columnSize={12} />
-                        </Col>
-                    </Row>
-                </TabPane>
-                
-                {/* Tab 5: Trainers */}
-                <TabPane tabId="5">
-                    <Row>
-                        <Col xl={6}>
-                            <CertificationTrainersChart columnSize={12} />
-                        </Col>
-                        <Col xl={6}>
-                            <Card>
-                                <CardBody>
-                                    <CardTitle className="mb-4">Trainer Qualifications</CardTitle>
-                                    <EmploymentOutcomesChart columnSize={12} />
-                                </CardBody>
-                            </Card>
-                        </Col>
-                    </Row>
-                </TabPane>
-                
-                {/* Tab 6: Certification */}
-                <TabPane tabId="6">
-                    <Row>
-                        <Col xl={6}>
-                            <CertificationTrainersChart columnSize={12} />
-                        </Col>
-                        <Col xl={6}>
-                            <EmploymentOutcomesChart columnSize={12} />
-                        </Col>
+                        <CertificationTrainersChart />
+                        <ProgramsPieChart />
+                        <EnrollmentPassoutChart />
                     </Row>
                 </TabPane>
             </TabContent>
-        </div>
+        </div >
     );
 }
 
-export default NavTab;
+export default NavTabLayout;

@@ -86,7 +86,7 @@ const UserPanel = () => {
                 </div>
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Institutes</p>
-                  <h5 className="mb-3 st-card-num">{institutes[selectedProvince ?? 'all']['total']}</h5>
+                  <h5 className="mb-3 st-card-num">{institutes['total']}</h5>
                 </div>
               </div>
             </CardBody>
@@ -101,7 +101,7 @@ const UserPanel = () => {
                 </div>
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">NAVTTC Registerd</p>
-                  <h5 className="mb-3 st-card-num">{institutes[selectedProvince ?? 'all']['registerd']}</h5>
+                  <h5 className="mb-3 st-card-num">{institutes['registerd']}</h5>
                 </div>
               </div>
             </CardBody>
@@ -132,7 +132,7 @@ const UserPanel = () => {
                 </div>
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Acreditation</p>
-                  <h5 className="mb-3 st-card-num">{institutes[selectedProvince ?? 'all']['acreditation']}</h5>
+                  <h5 className="mb-3 st-card-num">{institutes['acreditation']}</h5>
                 </div>
               </div>
             </CardBody>
@@ -147,7 +147,7 @@ const UserPanel = () => {
                 </div>
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Not Registerd</p>
-                  <h5 className="mb-3 st-card-num">{institutes[selectedProvince ?? 'all']['not-registerd']}</h5>
+                  <h5 className="mb-3 st-card-num">{institutes['not-registerd']}</h5>
                 </div>
               </div>
             </CardBody>
@@ -162,7 +162,7 @@ const UserPanel = () => {
                 </div>
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Affiliates</p>
-                  <h5 className="mb-3 st-card-num">{institutes[selectedProvince ?? 'all']['affiliates']}</h5>
+                  <h5 className="mb-3 st-card-num">{institutes['affiliates']}</h5>
                 </div>
               </div>
             </CardBody>

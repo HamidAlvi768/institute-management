@@ -35,7 +35,7 @@ const chartViews = {
   },
 };
 
-const EmploymentOutcomesChart = ({ cardClassName = '' }) => {
+const EmploymentOutcomesChart = ({ cardClassName = '', columnSize = 4 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedView, setSelectedView] = useState('Overall');
 
@@ -46,7 +46,7 @@ const EmploymentOutcomesChart = ({ cardClassName = '' }) => {
 
   return (
     <React.Fragment>
-      <Col xl={4}>
+      <Col xl={columnSize}>
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">
@@ -80,4 +80,4 @@ const EmploymentOutcomesChart = ({ cardClassName = '' }) => {
   );
 };
 
-export default EmploymentOutcomesChart; 
+export default EmploymentOutcomesChart;

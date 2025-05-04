@@ -54,13 +54,13 @@ const chartData = {
   },
 };
 
-const ProgramsPieChart = ({ cardClassName = '' }) => {
+const ProgramsPieChart = ({ cardClassName = '', columnSize = 4 }) => {
   // Log chart data for debugging
   console.log('Chart Data:', chartData);
 
   return (
     <React.Fragment>
-      <Col xl={4}>
+      <Col xl={columnSize}>
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">

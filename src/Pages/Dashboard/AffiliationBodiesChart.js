@@ -2,10 +2,10 @@ import React from "react";
 import { Card, CardBody, CardTitle, Col } from "reactstrap";
 import AffiliationBodyChart from "../AllCharts/apex/AffiliationBodyChart";
 
-const AffiliationBodiesChart = () => {
+const AffiliationBodiesChart = ({ columnSize = 6 }) => {
   return (
     <React.Fragment>
-      <Col xl={6}>
+      <Col xl={columnSize}>
         <Card>
           <CardBody>
             <CardTitle className="mb-4">

@@ -4,21 +4,33 @@ import ReactApexChart from 'react-apexcharts';
 // import MapPakistan from './MapPakistan'; // Uncomment if you have a map component
 
 const chartViews = {
-  'Registration': {
-    series: [
-      { name: 'Registered', data: [80, 60, 70, 50, 40] },
-      { name: 'Non-Registered', data: [20, 40, 30, 50, 60] },
-    ],
-    options: {
-      chart: { type: 'bar', stacked: true, toolbar: { show: false } },
-      xaxis: { categories: ['Punjab', 'Sindh', 'KPK', 'Balochistan', 'Islamabad'] },
-      colors: ['#1b5642', '#a9cd98'],
-      plotOptions: { bar: { horizontal: false, columnWidth: '45%' } },
-      dataLabels: { enabled: true },
-      legend: { show: true, position: 'bottom' },
+'Registration': {
+  series: [
+    { name: 'Registered', data: [80, 60, 70, 50, 40] },
+    { name: 'Non-Registered', data: [20, 40, 30, 50, 60] },
+  ],
+  options: {
+    chart: { 
+      type: 'bar', 
+      stacked: true, 
+      toolbar: { show: false }, 
+      foreColor: '#ffffff' 
     },
-    type: 'bar',
+    xaxis: { categories: ['Punjab', 'Sindh', 'KPK', 'Balochistan', 'Islamabad'] },
+    colors: ['#1b5642', '#a9cd98'],
+    plotOptions: { 
+      bar: { horizontal: false, columnWidth: '45%' } 
+    },
+    dataLabels: {
+      enabled: true,
+      style: {
+        colors: ['#ffffff', '#000000'] // White for 'Registered', Black for 'Non-Registered'
+      }
+    },
+    legend: { show: true, position: 'bottom' },
   },
+  type: 'bar',
+},
   'Accreditation': {
     series: [
       { name: 'National', data: [50, 40, 30, 20, 10] },

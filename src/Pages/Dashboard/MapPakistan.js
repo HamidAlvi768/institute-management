@@ -1,5 +1,7 @@
 /* global Highcharts topojson turf */
 import React, { useState, useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { setSelectedProvince } from '../../store/provinceActions';
 
 const provinceData = [
     {
@@ -34,7 +36,7 @@ const provinceData = [
     },
     {
         'hc-key': 'pk-is',
-        name: 'ICT',
+        name: 'Federal',
         value: 5,
         description: "Federal capital territory containing Pakistan's capital city.",
         color: '#1b5642',
@@ -57,6 +59,7 @@ const provinceData = [
 ];
 
 function MapPakistan() {
+    const [selectedProvinceIs, setSelectedProvinceIs] = useState(null);
     const [provincesData, setProvincesData] = useState(provinceData);
     const mapContainer = useRef(null);
     const chartRef = useRef(null);
@@ -64,12 +67,15 @@ function MapPakistan() {
         title: '',
         description: 'Click on a province to see more information. Use the navigation controls to zoom and pan the map.',
     });
+    const dispatch = useDispatch();
 
     // Handle province click to show only the clicked province
     const handleProvinceClick = (province) => {
         const selectedProvince = provinceData.map((p) => {
             if (p.name === province.name) {
                 p.color = "#1b5642";
+                setSelectedProvinceIs(province)
+                dispatch(setSelectedProvince(province.name))
             }
             else {
                 p.color = '#a9cd98';
@@ -81,10 +87,37 @@ function MapPakistan() {
             // Update the map's series data directly
             if (chartRef.current) {
                 chartRef.current.series[0].setData(selectedProvince);
+            
+                const chart = chartRef.current;
+                const point = chart.get(province['hc-key']); // Get the clicked point by its hc-key
+            
+                if (point && point.feature) {
+                    // Use turf to get the bounding box of the province feature
+                    const bbox = turf.bbox(point.feature); // [minX, minY, maxX, maxY]
+            
+                    const minX = bbox[0];
+                    const minY = bbox[1];
+                    const maxX = bbox[2];
+                    const maxY = bbox[3];
+            
+                    const centerX = (minX + maxX) / 2;
+                    const centerY = (minY + maxY) / 2;
+                    const width = maxX - minX;
+                    const height = maxY - minY;
+            
+                    // Compute zoom factor — smaller provinces = higher zoom
+                    const scaleX = chart.plotWidth / width;
+                    const scaleY = chart.plotHeight / height;
+                    const zoom = Math.min(scaleX, scaleY) * 0.8; // 0.8 = small padding
+            
+                    // Apply zoom and center
+                    chart.mapZoom(zoom, centerX, centerY, undefined, false);
+                }
             }
-        }
-        console.log(`Province clicked: ${province.name}`);
-    };
+            
+            console.log(`Province clicked: ${province.name}`);
+        };
+    }
 
     useEffect(() => {
         const initializeMap = async () => {
@@ -126,10 +159,10 @@ function MapPakistan() {
                     title: { text: '', style: { fontSize: '0px' } },
                     subtitle: { text: '', style: { fontSize: '0px' } },
                     mapNavigation: {
-                        enabled: false,
+                        enabled: true,
                         buttonOptions: { verticalAlign: 'bottom', style: { color: '#333' } },
                     },
-                    legend: { enabled: false },
+                    legend: { enabled: true },
                     colorAxis: { visible: false },
                     tooltip: {
                         headerFormat: '',
@@ -211,7 +244,7 @@ function MapPakistan() {
     return (
         <div
             ref={mapContainer}
-            className="w-full max-w-4xl h-[400px] max-w-[380px]"
+            className="w-full max-w-4xl h-[500px] min-w-[300px]"
         ></div>
     );
 }

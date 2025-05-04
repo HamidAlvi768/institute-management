@@ -9,8 +9,10 @@ import forgetPassword from "./auth/forgetpwd/reducer";
 import login from "./auth/login/reducer";
 import profile from "./auth/profile/reducer";
 import account from "./auth/register/reducer";
+import provinceReducer from "./provinceReducer";
 
 const rootReducer = combineReducers({
+  province: provinceReducer,
   // public
   Layout,
   forgetPassword,

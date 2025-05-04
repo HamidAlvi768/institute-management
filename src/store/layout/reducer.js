@@ -14,7 +14,7 @@ import {
 //constants
 import {
   layoutTypes,
-layoutModeTypes,
+  layoutModeTypes,
   layoutWidthTypes,
   topBarThemeTypes,
   leftSidebarTypes,

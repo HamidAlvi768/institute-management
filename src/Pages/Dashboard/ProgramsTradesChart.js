@@ -44,14 +44,14 @@ const chartViews = {
   },
 };
 
-const ProgramsTradesChart = ({ cardClassName = '' }) => {
+const ProgramsTradesChart = ({ cardClassName = '', columnSize = 8 }) => {
   const [activeTab, setActiveTab] = useState('Top Trades');
 
   const chartData = chartViews[activeTab] || chartViews['Sector-wise'];
 
   return (
     <React.Fragment>
-      <Col xl={8}>
+      <Col xl={columnSize}>
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">

@@ -33,14 +33,14 @@ const chartViews = {
   },
 };
 
-const CertificationTrainersChart = ({ cardClassName = '' }) => {
+const CertificationTrainersChart = ({ cardClassName = '', columnSize = 4 }) => {
   const [activeTab, setActiveTab] = useState('Certifications');
 
   const chartData = chartViews[activeTab];
 
   return (
     <React.Fragment>
-      <Col xl={4}>
+      <Col xl={columnSize}>
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">
@@ -75,4 +75,4 @@ const CertificationTrainersChart = ({ cardClassName = '' }) => {
   );
 };
 
-export default CertificationTrainersChart; 
+export default CertificationTrainersChart;

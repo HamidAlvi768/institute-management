@@ -3,7 +3,7 @@ import { Card, CardBody, Col, Row } from "reactstrap";
 import { SocialSourceData } from "../../CommonData/Data/index";
 import SectorsBarChart from "../AllCharts/apex/sectorsBarChart";
 
-const SectorsAnalytics = () => {
+const SectorsAnalytics = ({ columnSize = 6 }) => {
 
   const years = {
     'all': {
@@ -61,7 +61,7 @@ const SectorsAnalytics = () => {
 
   return (
     <React.Fragment>
-      <Col xl={6}>
+      <Col xl={columnSize}>
         <Card>
           <CardBody>
             <div className="d-flex align-items-center">

@@ -33,6 +33,14 @@ const UserPanel = () => {
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Institutes</p>
                   <h5 className="mb-3 st-card-num">{institutes['total']}</h5>
+                  <p className="text-truncate mb-0">
+                    <span className="text-success me-2">
+                      {" "}
+                      0.02%{" "}
+                      <i className="ri-arrow-right-up-line align-bottom ms-1"></i>
+                    </span>{" "}
+                    From previous
+                  </p>
                 </div>
               </div>
             </CardBody>
@@ -48,6 +56,14 @@ const UserPanel = () => {
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">NAVTTC Registerd</p>
                   <h5 className="mb-3 st-card-num">{institutes['registerd']}</h5>
+                  <p className="text-truncate mb-0">
+                    <span className="text-success me-2">
+                      {" "}
+                      1.7%{" "}
+                      <i className="ri-arrow-right-up-line align-bottom ms-1"></i>
+                    </span>{" "}
+                    From previous
+                  </p>
                 </div>
               </div>
             </CardBody>
@@ -79,6 +95,14 @@ const UserPanel = () => {
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Acreditation</p>
                   <h5 className="mb-3 st-card-num">{institutes['acreditation']}</h5>
+                  <p className="text-truncate mb-0">
+                    <span className="text-danger me-2">
+                      {" "}
+                      0.01%{" "}
+                      <i className="ri-arrow-right-down-line align-bottom ms-1"></i>
+                    </span>{" "}
+                    From previous
+                  </p>
                 </div>
               </div>
             </CardBody>
@@ -94,6 +118,14 @@ const UserPanel = () => {
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Not Registerd</p>
                   <h5 className="mb-3 st-card-num">{institutes['not-registerd']}</h5>
+                  <p className="text-truncate mb-0">
+                    <span className="text-danger me-2">
+                      {" "}
+                      0.01%{" "}
+                      <i className="ri-arrow-right-down-line align-bottom ms-1"></i>
+                    </span>{" "}
+                    From previous
+                  </p>
                 </div>
               </div>
             </CardBody>
@@ -109,6 +141,14 @@ const UserPanel = () => {
                 <div className="flex-grow-1 overflow-hidden">
                   <p className="mb-1 st-card-title">Affiliates</p>
                   <h5 className="mb-3 st-card-num">{institutes['affiliates']}</h5>
+                  <p className="text-truncate mb-0">
+                    <span className="text-danger me-2">
+                      {" "}
+                      0.01%{" "}
+                      <i className="ri-arrow-right-down-line align-bottom ms-1"></i>
+                    </span>{" "}
+                    From previous
+                  </p>
                 </div>
               </div>
             </CardBody>

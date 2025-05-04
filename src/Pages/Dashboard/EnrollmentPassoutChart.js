@@ -18,10 +18,10 @@ const chartData = {
   type: 'line',
 };
 
-const EnrollmentPassoutChart = ({ cardClassName = '' }) => {
+const EnrollmentPassoutChart = ({ cardClassName = '', columnSize = 4 }) => {
   return (
     <React.Fragment>
-      <Col xl={4}>
+      <Col xl={columnSize}>
         <Card className={cardClassName}>
           <CardBody>
             <div className="d-flex align-items-center justify-content-between mb-2">

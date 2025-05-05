@@ -78,8 +78,8 @@ const RadialChart1 = () => {
           options={radialoptions}
           series={series}
           type="radialBar"
-          height="72"
-          width= "72"
+          height="60"
+          width= "60"
           className="apex-charts"
         />
       </React.Fragment>

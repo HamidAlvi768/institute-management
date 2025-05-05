@@ -19,6 +19,8 @@ import AffiliationBodiesChart from './AffiliationBodiesChart';
 import { Row, Container, Col, Card, CardBody, CardTitle } from "reactstrap";
 import CourseChart from "../AllCharts/apex/coursechart";
 import NavTab from "./NavTab";
+import StatsCards from "./StatsCards";
+import HierarchyNavigation from "./Hirarchy";
 
 const Dashboard = () => {
   document.title = "Dashboard | Navttc - React Admin & Dashboard Template";
@@ -29,11 +31,20 @@ const Dashboard = () => {
       <div className="page-content">
         <Container fluid={true}>
           {/* User Panel Charts */}
-          <UserPanel />
 
           <Row>
-            {/* Overview Chart */}
-            <OverView />
+            {/* <Col xs={2}>
+              <HierarchyNavigation />
+            </Col> */}
+            <Col xs={7}>
+              <OverView /></Col>
+            <Col xs={5}>
+              {/* <UserPanel /> */}
+              <StatsCards />
+            </Col>
+          </Row>
+
+          <Row>
             {/* Socil Source Chart */}
             <SocialSource />
             <InstituteMetricsChart />

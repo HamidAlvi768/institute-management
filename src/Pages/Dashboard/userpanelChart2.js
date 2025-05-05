@@ -27,7 +27,7 @@ const RadialChart2 = () => {
         dataLabels: {
             enabled: false
         },
-        colors: ['#a9cd98'],
+        colors: ['#1b5642', '#a9cd98', '#f1b44c'],
         stroke: {
             lineCap: 'round',
             dashArray: 0

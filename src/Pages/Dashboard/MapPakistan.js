@@ -1,6 +1,6 @@
 /* global Highcharts topojson turf */
 import React, { useState, useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedProvince } from '../../store/provinceActions';
 
 const provinceData = [
@@ -39,7 +39,7 @@ const provinceData = [
         name: 'Federal',
         value: 5,
         description: "Federal capital territory containing Pakistan's capital city.",
-        color: '#1b5642',
+        color: '#a9cd98',
         textColor: 'black',
     },
     {
@@ -69,6 +69,9 @@ function MapPakistan() {
     });
     const dispatch = useDispatch();
 
+    const selectedProvinceFromState = useSelector((state) => state.province.selectedProvince);
+
+
     // Handle province click to show only the clicked province
     const handleProvinceClick = (province) => {
         const selectedProvince = provinceData.map((p) => {
@@ -87,39 +90,17 @@ function MapPakistan() {
             // Update the map's series data directly
             if (chartRef.current) {
                 chartRef.current.series[0].setData(selectedProvince);
-            
+
                 const chart = chartRef.current;
-                const point = chart.get(province['hc-key']); // Get the clicked point by its hc-key
-            
-                if (point && point.feature) {
-                    // Use turf to get the bounding box of the province feature
-                    const bbox = turf.bbox(point.feature); // [minX, minY, maxX, maxY]
-            
-                    const minX = bbox[0];
-                    const minY = bbox[1];
-                    const maxX = bbox[2];
-                    const maxY = bbox[3];
-            
-                    const centerX = (minX + maxX) / 2;
-                    const centerY = (minY + maxY) / 2;
-                    const width = maxX - minX;
-                    const height = maxY - minY;
-            
-                    // Compute zoom factor — smaller provinces = higher zoom
-                    const scaleX = chart.plotWidth / width;
-                    const scaleY = chart.plotHeight / height;
-                    const zoom = Math.min(scaleX, scaleY) * 0.8; // 0.8 = small padding
-            
-                    // Apply zoom and center
-                    chart.mapZoom(zoom, centerX, centerY, undefined, false);
-                }
+                const point = chart.get(province['hc-key']);
             }
-            
+
             console.log(`Province clicked: ${province.name}`);
         };
     }
 
     useEffect(() => {
+
         const initializeMap = async () => {
             try {
                 if (!window.Highcharts || !window.topojson || !window.turf) {
@@ -240,6 +221,62 @@ function MapPakistan() {
             }
         };
     }, []); // Empty dependency array since we handle data updates manually
+
+    // Update map based on selectedProvinceFromState
+    useEffect(() => {
+        console.log(`==== ${selectedProvinceFromState} ====`)
+        if (selectedProvinceFromState && selectedProvinceFromState !== "all") {
+            const selected = provinceData.find((p) => p.name === selectedProvinceFromState);
+            if (selected) {
+                setSelectedProvince(selected.name);
+                setInfoContent({
+                    title: selected.name,
+                    description: selected.description,
+                });
+                if (chartRef.current) {
+                    const chart = chartRef.current;
+                    // Update colors for all points
+                    chart.series[0].points.forEach((point) => {
+                        const matchingProvince = provinceData.find((p) => p['hc-key'] === point['hc-key']);
+                        if (matchingProvince) {
+                            const isSelected = matchingProvince.name === selected.name;
+                            point.update({
+                                color: isSelected ? '#1b5642' : '#a9cd98',
+                                dataLabels: {
+                                    style: {
+                                        color: matchingProvince.textColor || 'black',
+                                        fontSize: '11px',
+                                        fontWeight: 'bold',
+                                        textOutline: '1px',
+                                    },
+                                },
+                            }, false);
+                        }
+                    });
+                    chart.redraw();
+                }
+            }
+        } else {
+            setSelectedProvince(null); if (chartRef.current) {
+                const chart = chartRef.current;
+                // Update colors for all points
+                chart.series[0].points.forEach((point) => {
+                    point.update({
+                        color: '#a9cd98',
+                        dataLabels: {
+                            style: {
+                                color: 'black',
+                                fontSize: '11px',
+                                fontWeight: 'bold',
+                                textOutline: '1px',
+                            },
+                        },
+                    }, false);
+                    chart.redraw();
+                });
+            }
+        }
+    }, [selectedProvinceFromState]);
 
     return (
         <div

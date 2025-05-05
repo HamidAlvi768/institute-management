@@ -167,9 +167,9 @@ const Header = (props) => {
               </div>
             </div> */}
 
-            <div className="flex align-items-center">
-              <label className="" style={{ 'margin-right': '5px' }}>Year:</label>
-              <select className="form-select form-select-sm mb-0 my-n1">
+            <div className="d-flex align-items-center">
+              <label className="mb-0 p-0" style={{ marginRight: '5px' }}>Year:</label>
+              <select className="form-select form-select-sm">
                 {["2025", "2024", "2023", "2022", "2021", "2020"].map((item, key) => (
                   <option key={key} value={item}>
                     {item}
